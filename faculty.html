@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Faculty Profiles | Gurukul Academy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "primary": "#5f1544",
+                "on-primary-fixed": "#3c0029",
+                "gold-300": "#F0CF65",
+                "tertiary-fixed-dim": "#9dd67d",
+                "secondary-container": "#fd519e",
+                "on-secondary-fixed-variant": "#8d004e",
+                "surface-variant": "#eddfe3",
+                "primary-fixed-dim": "#ffafd7",
+                "on-tertiary-fixed": "#072100",
+                "pink-100": "#FDF2F8",
+                "error": "#ba1a1a",
+                "error-container": "#ffdad6",
+                "secondary-fixed": "#ffd9e3",
+                "on-tertiary-container": "#91c972",
+                "ink-100": "#F5F5F5",
+                "primary-900": "#5C1F46",
+                "surface-container": "#f9eaef",
+                "tertiary": "#133c00",
+                "primary-container": "#7b2d5c",
+                "background": "#fff8f8",
+                "surface-tint": "#934171",
+                "surface-dim": "#e5d6db",
+                "on-background": "#211a1d",
+                "on-surface": "#211a1d",
+                "outline-variant": "#d7c1c9",
+                "on-secondary-fixed": "#3e001f",
+                "secondary-fixed-dim": "#ffb0ca",
+                "inverse-primary": "#ffafd7",
+                "gold-500": "#D4A017",
+                "surface-container-low": "#fff0f4",
+                "surface": "#fff8f8",
+                "tertiary-fixed": "#b8f396",
+                "primary-fixed": "#ffd8e9",
+                "primary-100": "#F5E8EF",
+                "surface-container-high": "#f3e4e9",
+                "pink-300": "#FAD2E1",
+                "inverse-surface": "#372e32",
+                "surface-bright": "#fff8f8",
+                "on-secondary": "#ffffff",
+                "tertiary-container": "#24550a",
+                "inverse-on-surface": "#fcedf1",
+                "ink-900": "#1A1A1A",
+                "ink-500": "#737373",
+                "surface-container-highest": "#eddfe3",
+                "on-error": "#ffffff",
+                "gold-100": "#FBF4D9",
+                "primary-500": "#9C4878",
+                "ink-700": "#404040",
+                "outline": "#84727a",
+                "on-primary-container": "#fe9bd0",
+                "on-surface-variant": "#524349",
+                "on-primary": "#ffffff",
+                "on-tertiary-fixed-variant": "#205106",
+                "secondary": "#b60d68",
+                "on-secondary-container": "#5c0031",
+                "on-error-container": "#93000a",
+                "surface-container-lowest": "#ffffff",
+                "on-primary-fixed-variant": "#772958",
+                "on-tertiary": "#ffffff",
+                "ink-300": "#D4D4D4",
+                "primary-300": "#D4A8C3"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "space-8": "32px",
+                "space-1": "4px",
+                "container-wide": "1440px",
+                "space-12": "48px",
+                "space-4": "16px",
+                "container-narrow": "720px",
+                "space-32": "128px",
+                "space-6": "24px",
+                "space-3": "12px",
+                "space-16": "64px",
+                "space-2": "8px",
+                "space-24": "96px",
+                "container-default": "1200px"
+            },
+            "fontFamily": {
+                "text-h3": ["Poppins"],
+                "text-hero-mobile": ["Poppins"],
+                "text-h4": ["Poppins"],
+                "text-tiny": ["Inter"],
+                "text-lead": ["Inter"],
+                "text-h1": ["Poppins"],
+                "text-hero": ["Poppins"],
+                "text-body": ["Inter"],
+                "text-h2": ["Poppins"],
+                "text-small": ["Inter"]
+            },
+            "fontSize": {
+                "text-h3": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                "text-hero-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "text-h4": ["22px", {"lineHeight": "30px", "fontWeight": "600"}],
+                "text-tiny": ["12px", {"lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "500"}],
+                "text-lead": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+                "text-h1": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                "text-hero": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "text-body": ["16px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "text-h2": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                "text-small": ["14px", {"lineHeight": "22px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-blob {
+            filter: blur(80px);
+            opacity: 0.15;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-text-body overflow-x-hidden">
+<!-- TopNavBar Navigation Shell -->
+<header class="docked full-width top-0 sticky z-50 bg-surface shadow-sm hover:shadow-md transition-shadow duration-300">
+<div class="flex justify-between items-center w-full max-w-container-default mx-auto px-space-6 h-20">
+<div class="font-text-h4 font-bold text-primary tracking-tight">Gurukul Academy</div>
+<nav class="hidden md:flex items-center gap-space-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-text-body text-text-body" href="index.html">Home</a>
+
+<a class="text-on-surface-variant hover:text-primary transition-colors font-text-body text-text-body" href="about.html">About Us</a>
+
+<a class="text-on-surface-variant hover:text-primary transition-colors font-text-body text-text-body" href="academics.html">Academics</a>
+
+<a class="text-on-surface-variant hover:text-primary transition-colors font-text-body text-text-body" href="admissions.html">Admissions</a>
+
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 font-text-body text-text-body" href="faculty.html">Life @ School</a>
+
+<a class="text-on-surface-variant hover:text-primary transition-colors font-text-body text-text-body" href="contact.html">Contact</a>
+</nav>
+<button class="bg-primary text-on-primary px-space-6 py-space-2 rounded-lg font-text-small font-semibold hover:translate-y-[-1px] transition-all shadow-sm hover:shadow-md active:scale-95">Apply Now</button>
+</div>
+</header>
+<main class="relative min-h-screen">
+<!-- Background Accents -->
+<div class="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
+<div class="soft-blob absolute top-[10%] -left-20 w-96 h-96 rounded-full bg-primary-container"></div>
+<div class="soft-blob absolute top-[40%] -right-20 w-80 h-80 rounded-full bg-gold-300"></div>
+<div class="soft-blob absolute bottom-[10%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-pink-100"></div>
+</div>
+<!-- Hero Section -->
+<section class="max-w-container-default mx-auto px-space-6 pt-space-16 pb-space-8 text-center">
+<span class="inline-block bg-pink-300 text-primary font-text-tiny uppercase px-space-3 py-space-1 rounded-full mb-space-4 font-bold tracking-widest">Our Educators</span>
+<h1 class="font-text-h1 text-text-h1 md:text-text-hero text-on-background mb-space-4">Meet Our Mentors</h1>
+<p class="max-w-container-narrow mx-auto text-on-surface-variant text-text-lead font-text-lead">
+                Bridging ancient wisdom with modern pedagogies through a team of dedicated, lifelong learners and passionate educators.
+            </p>
+</section>
+<!-- Filter Component -->
+<section class="max-w-container-default mx-auto px-space-6 mb-space-12">
+<div class="flex flex-wrap justify-center gap-space-4 bg-surface-container-low p-space-4 rounded-xl shadow-sm border border-outline-variant/30">
+<button class="px-space-6 py-space-2 rounded-full bg-primary text-on-primary font-semibold shadow-md transition-all">All Faculty</button>
+<button class="px-space-6 py-space-2 rounded-full text-on-surface-variant hover:bg-white transition-all font-medium">ECD</button>
+<button class="px-space-6 py-space-2 rounded-full text-on-surface-variant hover:bg-white transition-all font-medium">Basic</button>
+<button class="px-space-6 py-space-2 rounded-full text-on-surface-variant hover:bg-white transition-all font-medium">Secondary</button>
+<div class="h-10 w-px bg-outline-variant mx-space-2 hidden md:block"></div>
+<div class="relative flex-grow md:max-w-xs">
+<span class="material-symbols-outlined absolute left-space-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-space-12 pr-space-4 py-space-2 bg-white border border-outline-variant rounded-lg focus:ring-4 focus:ring-primary-100 focus:border-primary transition-all" placeholder="Search by name or subject..." type="text"/>
+</div>
+</div>
+</section>
+<!-- Faculty Grid -->
+<section class="max-w-container-default mx-auto px-space-6 pb-space-32">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-8">
+<!-- Faculty Card 1 -->
+<div class="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional portrait of a female teacher in her late 30s with a warm, welcoming smile. She is wearing a smart purple blazer that aligns with the school's corporate identity. The background is a soft-focus library setting with warm, golden ambient lighting. The overall mood is professional, wise, and approachable, emphasizing the premium educational environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvYfZvQMj5qb2nQerUHVVwSADB1u2jJ8_86gSPM6vD8nMuQvJ2HRmWTj36omc-OxfoSW2QVV8g0lrBwzHcpyi-XvlW61c4lmDOWCykX1sQYglEMlFh8kZj0mtyW70YoQOyUFHVNAZeH8S8QxxqJdlfAi2IHSQa1zQNigCkWaD5RvOXEwDycFmgmd7XkoZc2fwApcIPF9te9Y-6QSm3LhH_zXInLoNuRZvl1Y84lLeOGG--_5xVjhY9tKrVaKqPJY2TaXf-1zjNJR8"/>
+<div class="absolute top-space-4 right-space-4">
+<span class="bg-gold-300 text-on-primary-fixed px-space-3 py-1 rounded-full text-text-tiny font-bold shadow-sm">Secondary</span>
+</div>
+</div>
+<div class="p-space-6">
+<span class="text-primary font-text-tiny uppercase font-bold tracking-tighter">Department Head</span>
+<h3 class="font-text-h4 text-text-h4 text-on-surface mt-space-1">Dr. Ananya Sharma</h3>
+<p class="text-on-surface-variant text-text-small font-text-small mb-space-4">Ph.D. in Theoretical Physics, MIT</p>
+<div class="flex flex-wrap gap-2 pt-space-4 border-t border-outline-variant">
+<span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-[12px] font-semibold">Physics</span>
+<span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-[12px] font-semibold">Mathematics</span>
+</div>
+</div>
+</div>
+<!-- Faculty Card 2 -->
+<div class="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional male teacher in his 40s wearing a dark brown tweed jacket, reflecting a sophisticated and academic look. He has a kind expression and is standing in a brightly lit modern classroom with wood accents. The lighting is high-key and soft, creating an airy and premium feel. The color palette is earthy and grounded, consistent with the school's warm aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1YUOfMmI95C4zyk-_SMomEDL3nEhOKX1L19yOeTjJBdc1TLkbWJ_dZoH6uZkegwNFeA4HLkbJnOj50Yz9FUJjVkQDUAdGSO5nJ4AP8G73pFai6gfIPwtt-liWWwAZJcMJx9e36S0GPd2wWuzK7BKGAJboG2waAt-2YusvtTcUzkNTRcIUpWk6uOElGblvXqz1iojgXrKdyUn_IBlB55C-iSUHJaLGn7_I7c17xKD9CNHrC7AU22EGFRsbfUvtURKEpRU6KU-NHGE"/>
+<div class="absolute top-space-4 right-space-4">
+<span class="bg-gold-300 text-on-primary-fixed px-space-3 py-1 rounded-full text-text-tiny font-bold shadow-sm">Basic</span>
+</div>
+</div>
+<div class="p-space-6">
+<span class="text-primary font-text-tiny uppercase font-bold tracking-tighter">Senior Faculty</span>
+<h3 class="font-text-h4 text-text-h4 text-on-surface mt-space-1">Mr. David Harrison</h3>
+<p class="text-on-surface-variant text-text-small font-text-small mb-space-4">M.A. in English Literature, Oxford</p>
+<div class="flex flex-wrap gap-2 pt-space-4 border-t border-outline-variant">
+<span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-[12px] font-semibold">Linguistics</span>
+<span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-[12px] font-semibold">Creative Writing</span>
+</div>
+</div>
+</div>
+<!-- Faculty Card 3 -->
+<div class="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A young female educator with a cheerful and energetic expression, standing in a vibrant and organized early childhood development center. She is wearing a soft pink blouse that complements the school's brand colors. The room is filled with natural sunlight and soft-edged geometric shapes. The atmosphere is nurturing, playful, and deeply trustworthy, perfect for early education." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi5SLvEAHsx_fSUmVMVn_RCEP-db5sZJ8fepQgWaC6GTF6OSbGNA_y0uVrpns6EXBDa1Kq_qBNHWs9E4-sBoof4PPCA0i0KBHNL8K4KA-X6UIcGLFdxm4zcqn3HqFPmYQ_CHDpP9svM8qic19gR1HtzsJLnKWt2FZe8tfz9ZoGQRtbtmBXNxw24Lx5nixh8zn0QRGVwuc8Ko4bQ_RNTceJjiJjyflhY_UtLHF27cj_F_WRDavQUOQHSuZsMBtOjp1l75bd0IUZHcc"/>
+<div class="absolute top-space-4 right-space-4">
+<span class="bg-gold-300 text-on-primary-fixed px-space-3 py-1 rounded-full text-text-tiny font-bold shadow-sm">ECD</span>
+</div>
+</div>
+<div class="p-space-6">
+<span class="text-primary font-text-tiny uppercase font-bold tracking-tighter">Lead Educator</span>
+<h3 class="font-text-h4 text-text-h4 text-on-surface mt-space-1">Ms. Sarah Jenkins</h3>
+<p class="text-on-surface-variant text-text-small font-text-small mb-space-4">B.Ed. in Child Psychology</p>
+<div class="flex flex-wrap gap-2 pt-space-4 border-t border-outline-variant">
+<span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-[12px] font-semibold">Early Literacy</span>
+<span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-[12px] font-semibold">Sensory Arts</span>
+</div>
+</div>
+</div>
+<!-- Faculty Card 4 -->
+<div class="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An older male professor with a distinguished and wise appearance, wearing glasses and a formal white shirt with a deep purple tie. He is in a modern computer lab with sleek technology. The lighting is cool-toned but balanced by warm highlights on the subject. The style is highly professional and corporate, conveying a sense of deep expertise and reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsmaMa1kyHNUOi2W5DRf-U_CRmFjkIaS3peoRU_Y3cFHoRljHYzV0voVLHd-WU0Y3iOLYgfaWO6Sb24kDVQT6RHPMc7lgxIOg9Ho29-QX7Kiey6YsFPvXZXCHPU0agHzh8SRfFXPTm_tmupHmjkpsh5TguojIUP79nYKNYcsumho622TP2XCWuoPE4th05avv51zb_3LzhDZprIZj9jlO9eLcA_rr76-Z2KYcCxDTZpT_9_0sE-vztigLgFkzdLopZ8YWMiGdQXVY"/>
+<div class="absolute top-space-4 right-space-4">
+<span class="bg-gold-300 text-on-primary-fixed px-space-3 py-1 rounded-full text-text-tiny font-bold shadow-sm">Secondary</span>
+</div>
+</div>
+<div class="p-space-6">
+<span class="text-primary font-text-tiny uppercase font-bold tracking-tighter">Tech Coordinator</span>
+<h3 class="font-text-h4 text-text-h4 text-on-surface mt-space-1">Prof. Robert Chen</h3>
+<p class="text-on-surface-variant text-text-small font-text-small mb-space-4">M.Tech in AI, Stanford University</p>
+<div class="flex flex-wrap gap-2 pt-space-4 border-t border-outline-variant">
+<span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-[12px] font-semibold">Computer Science</span>
+<span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-[12px] font-semibold">Robotics</span>
+</div>
+</div>
+</div>
+<!-- More cards following the same pattern -->
+<!-- Faculty Card 5 -->
+<div class="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A male art teacher with a creative and enthusiastic demeanor. He is wearing a minimalist apron over a casual shirt, standing in a bright, airy art studio filled with colorful paintings. The scene is illuminated by large windows creating soft, natural light. The aesthetic is modern and inspiring, blending the school's corporate structure with artistic freedom." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVljuNGzUGdSE_g3XDfxSmbdiNQESVvP4-2-cM_67Z4PRk_2sQ0IMTWr0VwKQN6TP6-rNBzZMBoO2t3vJbUI0hT1ppQyXMmgqk8WO0DfRzHcFM-dDLdzS5zum-Kxw_nSWYdLsaffI1hlp5EWZqfriUneVB4j5DrTP23oRSQFj5ubVPDbbf7qQBHUFrZKuzOHHvwaw04tPvNLG59DykIaRelPHLkXdk0YMSdS7zh_C9IeH0HHP_CHcuXgrqtArdH2egPvkba5FrRRk"/>
+<div class="absolute top-space-4 right-space-4">
+<span class="bg-gold-300 text-on-primary-fixed px-space-3 py-1 rounded-full text-text-tiny font-bold shadow-sm">Basic</span>
+</div>
+</div>
+<div class="p-space-6">
+<span class="text-primary font-text-tiny uppercase font-bold tracking-tighter">Arts Faculty</span>
+<h3 class="font-text-h4 text-text-h4 text-on-surface mt-space-1">Mr. Julian Vance</h3>
+<p class="text-on-surface-variant text-text-small font-text-small mb-space-4">B.F.A. from Royal Academy of Arts</p>
+<div class="flex flex-wrap gap-2 pt-space-4 border-t border-outline-variant">
+<span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-[12px] font-semibold">Fine Arts</span>
+<span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-[12px] font-semibold">Sculpture</span>
+</div>
+</div>
+</div>
+<!-- Faculty Card 6 -->
+<div class="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A female science teacher in her 30s with an inquisitive and intelligent look. She is in a high-tech laboratory with glassware and digital displays. She is wearing a clean, modern lab coat with the school's logo. The lighting is crisp and clear, with purple and blue laboratory accents. The mood is sophisticated and future-oriented." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5yQg6tX38gSeAZA579WeRjnrSxC96Pnq9Ohf5IIRNJoFqTh86QVwR6bnxUltodnWbyn4KRdV6rsbRGgaHPFwrMq8Da_CVzLobJWya9ryMMDpxLBLnSApwVvH0o5B3pUZDticQ6RKdlzCy4_X4yfk6WvxelFq3zlNbavuoE9Dm3_EqfIGIZdfAtk9l4zcwQ3sZFkDIsAvQ8mnPEqOUInJ-3KUQLWlHuXeuZsBfr-_SvXhlf2DCt5UDZEi9rOBRJ8zd9HwY5achmGA"/>
+<div class="absolute top-space-4 right-space-4">
+<span class="bg-gold-300 text-on-primary-fixed px-space-3 py-1 rounded-full text-text-tiny font-bold shadow-sm">Secondary</span>
+</div>
+</div>
+<div class="p-space-6">
+<span class="text-primary font-text-tiny uppercase font-bold tracking-tighter">Research Head</span>
+<h3 class="font-text-h4 text-text-h4 text-on-surface mt-space-1">Ms. Elena Rodriguez</h3>
+<p class="text-on-surface-variant text-text-small font-text-small mb-space-4">M.Sc. in Biological Sciences, ETH Zurich</p>
+<div class="flex flex-wrap gap-2 pt-space-4 border-t border-outline-variant">
+<span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-[12px] font-semibold">Biology</span>
+<span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-[12px] font-semibold">Genetics</span>
+</div>
+</div>
+</div>
+<!-- Faculty Card 7 -->
+<div class="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A warm, older female teacher with a grandmotherly and wise presence. She is reading a storybook in a cozy, sun-lit classroom with wooden furniture and soft pink rugs. Her expression is nurturing and kind. The light is soft and diffused, creating a serene and family-like atmosphere that is approachable and modern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkpX68UrokBeFefaetCE2G_78XkfPl70R1RpymOJpmSuD1Aceb86OiHq_9N7ftm_vMtY_coJWHbogLWU9IhG9QdI8VngLZsjrG0hvnw3kwsJSs6OcpaKmOMR2wUmARSJg9NCzHNDdoXsNTf9YQ8aekRcOHy8huszvbkd52iWLuOL4cqzH-rxOv1m1ZLA3ekcdVma6eCn1aBnTd-W4aa26V0HrTnIgUGi2Jjpu_Fnkwz1RYxPD3ZgjcMc9iaEwViVgMK_gA_Bulajs"/>
+<div class="absolute top-space-4 right-space-4">
+<span class="bg-gold-300 text-on-primary-fixed px-space-3 py-1 rounded-full text-text-tiny font-bold shadow-sm">ECD</span>
+</div>
+</div>
+<div class="p-space-6">
+<span class="text-primary font-text-tiny uppercase font-bold tracking-tighter">Senior Mentor</span>
+<h3 class="font-text-h4 text-text-h4 text-on-surface mt-space-1">Mrs. Margaret Boyle</h3>
+<p class="text-on-surface-variant text-text-small font-text-small mb-space-4">30+ Years in Montessori Education</p>
+<div class="flex flex-wrap gap-2 pt-space-4 border-t border-outline-variant">
+<span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-[12px] font-semibold">Montessori</span>
+<span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-[12px] font-semibold">Storytelling</span>
+</div>
+</div>
+</div>
+<!-- Faculty Card 8 -->
+<div class="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A male history teacher in his 50s with a thoughtful and calm expression, standing in a heritage-style library with ancient books and a modern laptop. He is wearing a premium charcoal sweater. The background has warm wooden tones and soft brand-tinted shadows. The overall image represents the bridge between tradition and contemporary learning." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAUFeD1X_ee5xKqrQL1vuFjV7sjN6IaPi1iPo81Pqb876pc-30zbBc50THPxNAxIOZbrJio5ElWv2VQZHcl9nQ1ZDwl0DmQD0q6iufVwxnUj2ppcOvQ5h7q9AorPMkKCpVd0f3zFzhHLt4fK6zHfFAdV6k_sdQc8BGw6yFOq-n5nfjbFU4XGJvFQkWw1-no3t6QqPuMno2IC3MgWREN1CjSbkJmj41S5BWBYTtpnBz0Dm6AKitIrKfGGbQQ48qpXHe3SWRT7YO8K0"/>
+<div class="absolute top-space-4 right-space-4">
+<span class="bg-gold-300 text-on-primary-fixed px-space-3 py-1 rounded-full text-text-tiny font-bold shadow-sm">Secondary</span>
+</div>
+</div>
+<div class="p-space-6">
+<span class="text-primary font-text-tiny uppercase font-bold tracking-tighter">Humanities Faculty</span>
+<h3 class="font-text-h4 text-text-h4 text-on-surface mt-space-1">Dr. Samuel Thorne</h3>
+<p class="text-on-surface-variant text-text-small font-text-small mb-space-4">Ph.D. in Ancient History, Cambridge</p>
+<div class="flex flex-wrap gap-2 pt-space-4 border-t border-outline-variant">
+<span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-[12px] font-semibold">History</span>
+<span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-[12px] font-semibold">Philosophy</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-container-default mx-auto px-space-6 pb-space-32">
+<div class="bg-primary-container rounded-2xl p-space-12 text-center text-on-primary-container relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary-container opacity-20 rounded-full -mr-32 -mt-32"></div>
+<h2 class="font-text-h2 text-text-h2 text-white mb-space-4">Inspired by our educators?</h2>
+<p class="text-pink-100 text-text-lead font-text-lead mb-space-8 max-w-container-narrow mx-auto">
+                    Join a community where learning has no limits. Our admissions for the 2024 academic session are now open.
+                </p>
+<div class="flex flex-col md:flex-row gap-space-4 justify-center">
+<button class="bg-gold-300 text-primary px-space-12 py-space-4 rounded-full font-bold text-text-body hover:translate-y-[-2px] transition-all shadow-lg active:scale-95">Book a School Visit</button>
+<button class="bg-transparent border-2 border-pink-300 text-pink-100 px-space-12 py-space-4 rounded-full font-bold text-text-body hover:bg-pink-300/10 transition-all active:scale-95">Download Brochure</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Navigation Shell -->
+<footer class="full-width relative mt-space-32 bg-primary dark:bg-on-primary-fixed border-t border-primary-container">
+<div class="w-full pt-space-16 pb-space-8 px-space-6 max-w-container-default mx-auto grid grid-cols-1 md:grid-cols-4 gap-space-12">
+<div class="col-span-1 md:col-span-1">
+<div class="font-text-h3 font-bold text-gold-300 mb-space-6">Gurukul Academy</div>
+<p class="text-pink-100 text-text-small font-text-small opacity-80">
+                    Nurturing the leaders of tomorrow through holistic education and timeless values.
+                </p>
+</div>
+<div>
+<h4 class="font-text-h4 text-text-h4 text-on-primary mb-space-6">Quick Links</h4>
+<ul class="space-y-space-3">
+<li><a class="text-pink-100 hover:text-white hover:underline decoration-gold-300 underline-offset-4 transition-all" href="#">Home</a></li>
+<li><a class="text-pink-100 hover:text-white hover:underline decoration-gold-300 underline-offset-4 transition-all" href="#">About Us</a></li>
+<li><a class="text-gold-300 font-bold" href="#">Faculty Profiles</a></li>
+<li><a class="text-pink-100 hover:text-white hover:underline decoration-gold-300 underline-offset-4 transition-all" href="#">Campus Life</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-text-h4 text-text-h4 text-on-primary mb-space-6">Admissions</h4>
+<ul class="space-y-space-3">
+<li><a class="text-pink-100 hover:text-white hover:underline decoration-gold-300 underline-offset-4 transition-all" href="#">How to Apply</a></li>
+<li><a class="text-pink-100 hover:text-white hover:underline decoration-gold-300 underline-offset-4 transition-all" href="#">Scholarships</a></li>
+<li><a class="text-pink-100 hover:text-white hover:underline decoration-gold-300 underline-offset-4 transition-all" href="#">Fee Structure</a></li>
+<li><a class="text-pink-100 hover:text-white hover:underline decoration-gold-300 underline-offset-4 transition-all" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-text-h4 text-text-h4 text-on-primary mb-space-6">Contact Us</h4>
+<div class="space-y-space-3 text-pink-100 text-text-small font-text-small">
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+                        Gurukul Heights, Kathmandu
+                    </p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                        +977 1 4567890
+                    </p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+                        admissions@gurukul.edu
+                    </p>
+</div>
+</div>
+</div>
+<div class="max-w-container-default mx-auto px-space-6 py-space-8 border-t border-primary-container/30 text-center text-pink-100/60 text-text-tiny uppercase tracking-widest font-bold">
+            © 2024 Gurukul Academy. All Rights Reserved.
+        </div>
+</footer>
+</body></html>

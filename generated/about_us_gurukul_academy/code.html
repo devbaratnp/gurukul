@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "primary": "#5f1544",
+                "on-primary-fixed": "#3c0029",
+                "gold-300": "#F0CF65",
+                "tertiary-fixed-dim": "#9dd67d",
+                "secondary-container": "#fd519e",
+                "on-secondary-fixed-variant": "#8d004e",
+                "surface-variant": "#eddfe3",
+                "primary-fixed-dim": "#ffafd7",
+                "on-tertiary-fixed": "#072100",
+                "pink-100": "#FDF2F8",
+                "error": "#ba1a1a",
+                "error-container": "#ffdad6",
+                "secondary-fixed": "#ffd9e3",
+                "on-tertiary-container": "#91c972",
+                "ink-100": "#F5F5F5",
+                "primary-900": "#5C1F46",
+                "surface-container": "#f9eaef",
+                "tertiary": "#133c00",
+                "primary-container": "#7b2d5c",
+                "background": "#fff8f8",
+                "surface-tint": "#934171",
+                "surface-dim": "#e5d6db",
+                "on-background": "#211a1d",
+                "on-surface": "#211a1d",
+                "outline-variant": "#d7c1c9",
+                "on-secondary-fixed": "#3e001f",
+                "secondary-fixed-dim": "#ffb0ca",
+                "inverse-primary": "#ffafd7",
+                "gold-500": "#D4A017",
+                "surface-container-low": "#fff0f4",
+                "surface": "#fff8f8",
+                "tertiary-fixed": "#b8f396",
+                "primary-fixed": "#ffd8e9",
+                "primary-100": "#F5E8EF",
+                "surface-container-high": "#f3e4e9",
+                "pink-300": "#FAD2E1",
+                "inverse-surface": "#372e32",
+                "surface-bright": "#fff8f8",
+                "on-secondary": "#ffffff",
+                "tertiary-container": "#24550a",
+                "inverse-on-surface": "#fcedf1",
+                "ink-900": "#1A1A1A",
+                "ink-500": "#737373",
+                "surface-container-highest": "#eddfe3",
+                "on-error": "#ffffff",
+                "gold-100": "#FBF4D9",
+                "primary-500": "#9C4878",
+                "ink-700": "#404040",
+                "outline": "#84727a",
+                "on-primary-container": "#fe9bd0",
+                "on-surface-variant": "#524349",
+                "on-primary": "#ffffff",
+                "on-tertiary-fixed-variant": "#205106",
+                "secondary": "#b60d68",
+                "on-secondary-container": "#5c0031",
+                "on-error-container": "#93000a",
+                "surface-container-lowest": "#ffffff",
+                "on-primary-fixed-variant": "#772958",
+                "on-tertiary": "#ffffff",
+                "ink-300": "#D4D4D4",
+                "primary-300": "#D4A8C3"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "space-8": "32px",
+                "space-1": "4px",
+                "container-wide": "1440px",
+                "space-12": "48px",
+                "space-4": "16px",
+                "container-narrow": "720px",
+                "space-32": "128px",
+                "space-6": "24px",
+                "space-3": "12px",
+                "space-16": "64px",
+                "space-2": "8px",
+                "space-24": "96px",
+                "container-default": "1200px"
+        },
+        "fontFamily": {
+                "text-h3": ["Poppins"],
+                "text-hero-mobile": ["Poppins"],
+                "text-h4": ["Poppins"],
+                "text-tiny": ["Inter"],
+                "text-lead": ["Inter"],
+                "text-h1": ["Poppins"],
+                "text-hero": ["Poppins"],
+                "text-body": ["Inter"],
+                "text-h2": ["Poppins"],
+                "text-small": ["Inter"]
+        },
+        "fontSize": {
+                "text-h3": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                "text-hero-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "text-h4": ["22px", {"lineHeight": "30px", "fontWeight": "600"}],
+                "text-tiny": ["12px", {"lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "500"}],
+                "text-lead": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+                "text-h1": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                "text-hero": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "text-body": ["16px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "text-h2": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                "text-small": ["14px", {"lineHeight": "22px", "fontWeight": "400"}]
+        }
+      },
+    },
+  }
+</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .soft-blob {
+            filter: blur(80px);
+            z-index: -1;
+        }
+        .timeline-line::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: #5f1544;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+        @media (max-width: 768px) {
+            .timeline-line::after {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-text-body">
+<!-- Top Navigation Bar -->
+<header class="bg-surface dark:bg-background docked full-width top-0 sticky z-50 shadow-sm transition-shadow duration-300">
+<div class="flex justify-between items-center w-full max-w-container-default mx-auto px-space-6 h-20">
+<div class="font-text-h4 font-bold text-primary dark:text-primary-fixed-dim tracking-tight">Gurukul Academy</div>
+<nav class="hidden md:flex items-center gap-space-8">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-text-body text-text-body" href="#">Home</a>
+<a class="text-primary dark:text-primary-fixed-dim font-semibold border-b-2 border-primary pb-1 font-text-body text-text-body" href="#">About Us</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-text-body text-text-body" href="#">Academics</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-text-body text-text-body" href="#">Admissions</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-text-body text-text-body" href="#">Life @ School</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-text-body text-text-body" href="#">Contact</a>
+</nav>
+<button class="bg-secondary text-on-secondary px-space-6 py-space-2 rounded-full font-text-small font-semibold hover:translate-y-[-1px] transition-all">Apply Now</button>
+</div>
+</header>
+<!-- Banner Section -->
+<section class="relative h-[614px] min-h-[400px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Gurukul Academy Campus" class="w-full h-full object-cover" data-alt="A grand, modern school building made of warm sandstone and glass, featuring traditional architectural elements like wide archways and a central courtyard. The setting is a lush, landscaped campus during the golden hour with soft sunlight illuminating the facade. The visual style is premium and corporate, with a clean light-mode aesthetic and deep purple accents reflected in the sky's subtle hues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_7ZY0Z5BVF1NMzBJFWNcntzVz1NIRjK3J4Kg6dEiEuYTbYerulZbrgwUT4wFV0Ddp-dnp-8d_LqRUk80Gvl2TkyirHu0DNWo2em3Vi5UV3vmzwubEtOkyv8UlLPY3cUNq4xHeXqg6TvMPWYfyqeBew5o90BEt0Y2zHkYW-AImTgoieI3fITHSXJZp9HDGDWjPiWFWew2gSLRaaB7bnkz5luHDB-5aoapJkz_FzTmoafEMzq7mFjc3JxRL-2p-OOCh9kG-bmt-eeg"/>
+<div class="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-default mx-auto px-space-6 w-full text-white">
+<span class="inline-block bg-gold-300 text-on-primary-fixed px-space-3 py-1 rounded-full text-text-tiny font-text-tiny mb-space-4">SINCE 1992</span>
+<h1 class="font-text-h1 text-text-h1 mb-space-4 max-w-2xl">Legacy of Excellence, Future of Innovation</h1>
+<p class="font-text-lead text-text-lead max-w-xl text-pink-100">Rooted in ancient wisdom and geared for the 21st century, Gurukul Academy is where leaders are born.</p>
+</div>
+</section>
+<!-- Our Story Section -->
+<section class="py-space-24 relative overflow-hidden">
+<div class="soft-blob absolute top-0 left-0 w-96 h-96 bg-primary-100 rounded-full opacity-50"></div>
+<div class="max-w-container-default mx-auto px-space-6">
+<div class="text-center mb-space-16">
+<h2 class="font-text-h2 text-text-h2 text-primary mb-space-4">Our Journey</h2>
+<div class="w-20 h-1.5 bg-gold-300 mx-auto rounded-full"></div>
+</div>
+<div class="relative timeline-line space-y-space-12">
+<!-- Timeline Item 1 -->
+<div class="flex flex-col md:flex-row items-center gap-space-8 relative">
+<div class="md:w-1/2 md:text-right">
+<h3 class="font-text-h3 text-text-h3 text-primary">1992</h3>
+<p class="font-text-body text-text-body text-on-surface-variant">The Foundation. Gurukul Academy started with a vision to integrate spiritual growth with academic rigor in a small heritage building.</p>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-primary border-4 border-white rounded-full z-10 md:block hidden"></div>
+<div class="md:w-1/2">
+<img alt="Heritage Building" class="rounded-lg shadow-md w-full max-w-md" data-alt="A charming old heritage school building with brick walls and large windows, surrounded by ancient banyan trees. The lighting is soft and nostalgic, using a warm sepia-tinted morning light that creates a trustworthy and established atmosphere. The overall palette is grounded in whites and earthy tones, maintaining a high-end educational aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyQHIIh_xLowAH1FVfjMzmKmoJx8zwm4MluNf5CN8IgsUs1phy4fM__0GCJz9h4sHEZlJaMiCgia79J7OqwVg5KaiKEkFhTcfrHxI2pcaoG2lIIMANSjx8FjHk-ZXHLykI7D6P3Sd1jTtR9zfm_dArLkXCO9VelFBZ8d877uIXHtBaOoqWg0_S00CKo--OY1eMM-X1Z06igRf2LDI2X91a9bb_rjM13H5KxP0Jg7fCSO1vOHMKhSJpQw00Zx4ggpdWwX9Ei4bQC6Y"/>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="flex flex-col md:flex-row-reverse items-center gap-space-8 relative">
+<div class="md:w-1/2">
+<h3 class="font-text-h3 text-text-h3 text-primary">2005</h3>
+<p class="font-text-body text-text-body text-on-surface-variant">Technological Leap. We introduced state-of-the-art computer labs and digital classrooms, becoming a pioneer in tech-enabled learning.</p>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-primary border-4 border-white rounded-full z-10 md:block hidden"></div>
+<div class="md:w-1/2 md:text-right flex justify-end">
+<img alt="Modern Lab" class="rounded-lg shadow-md w-full max-w-md" data-alt="A clean, modern computer laboratory with sleek white desks and high-end workstations. The room is brightly lit with cool white LED lighting that creates a professional, future-focused mood. The color palette is dominated by whites and soft grays, with subtle purple lighting accents to align with the brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXgOYoOgnRL7PTFcv4XJqBc1fpnyAtZv-nFElH_9pcxJzy5FXgi6cMjd00rAwRUpn1iRxXIBi2rcNHYyvJ1keTwHIrZwhm_rP3ihXZasGdEPDyoO_UnfdnAAWC97R5o_zx-upDlSYRS9RAR1NDyzXq2Wrm9XcgYjn3k_8AC_vglFVWka5swMCK5HZ0uPNY-1pSsQp4WA9vN_P7EPAljZxl3dMA9cJauSduRvfpiYqdDAfp0vf1zhA1cUOtZCkskSb40rMErshdXoY"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission/Vision/Values Section -->
+<section class="py-space-24 bg-surface-container-low">
+<div class="max-w-container-default mx-auto px-space-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-8">
+<!-- Mission -->
+<div class="bg-surface p-space-8 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+<span class="material-symbols-outlined text-primary text-4xl mb-space-4" data-icon="rocket_launch">rocket_launch</span>
+<h3 class="font-text-h3 text-text-h3 text-primary mb-space-4">Our Mission</h3>
+<p class="font-text-body text-text-body text-on-surface-variant">To empower students with a holistic education that fosters critical thinking, creativity, and a deep-rooted sense of social responsibility.</p>
+</div>
+<!-- Vision -->
+<div class="bg-surface p-space-8 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+<span class="material-symbols-outlined text-secondary text-4xl mb-space-4" data-icon="visibility">visibility</span>
+<h3 class="font-text-h3 text-text-h3 text-secondary mb-space-4">Our Vision</h3>
+<p class="font-text-body text-text-body text-on-surface-variant">To be a global leader in transformative education, nurturing wise minds that contribute positively to an interconnected world.</p>
+</div>
+<!-- Values -->
+<div class="bg-surface p-space-8 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+<span class="material-symbols-outlined text-gold-500 text-4xl mb-space-4" data-icon="star">star</span>
+<h3 class="font-text-h3 text-text-h3 text-gold-500 mb-space-4">Our Values</h3>
+<p class="font-text-body text-text-body text-on-surface-variant">Integrity, Compassion, Resilience, and a Lifelong Pursuit of Knowledge are the pillars that support our vibrant community.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Principal's Message -->
+<section class="py-space-32">
+<div class="max-w-container-narrow mx-auto px-space-6">
+<div class="flex flex-col items-center text-center mb-space-12">
+<img alt="Principal Portrait" class="w-32 h-32 rounded-full object-cover border-4 border-primary-100 shadow-lg mb-space-6" data-alt="A professional portrait of a senior female educator with a warm and wise expression. She is dressed in elegant, modest business attire. The background is a soft-focus library with shelves of books, illuminated by natural side-lighting that creates a soft, nurturing, and trustworthy mood. The palette uses professional tones of deep purple and warm cream." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARj9-knoe_GT8uWgBsFs8h3z_8ICbhkSW0GSujrG4TBaA6_jW1Ftxe6lppeUwNW5pE0_cu6siZGMg61CNcwuCXgmhykGjoUpjEtoAbrdl8JBjr5ilXeomLX_ibsbkQ92fwguGQF8FYISbeNmL8UewSdl8IOcLvumlm59HUdp_AYGpmCh8NJj1Q8dzlYPeFtmjZFjAFS2_WekMajTZ7Q7AKKtOoWxbJ3WegfC58wjfAwpLBEuUtdiIXcePbR44EWTbnQFtk2F0hfSA"/>
+<h2 class="font-text-h2 text-text-h2 text-primary">From the Principal's Desk</h2>
+<p class="font-text-small text-text-small text-secondary font-semibold uppercase tracking-widest mt-space-2">Dr. Ananya Sharma</p>
+</div>
+<div class="prose prose-lg text-on-surface-variant font-text-body leading-relaxed space-y-space-6 italic">
+<p>"Welcome to Gurukul Academy. For over three decades, our institution has been more than just a place of learning; it has been a second home for thousands of students who have gone on to shape the world."</p>
+<p>"We believe that every child is unique, possessing a spark of brilliance that needs to be carefully nurtured. Our curriculum is designed not just to test memory, but to challenge intellect and expand horizons. We don't just teach subjects; we teach students how to think, how to question, and how to lead with empathy."</p>
+<p>"As we embrace the digital age, our core values remain unchanged. We invite you to be a part of this beautiful journey of growth and discovery."</p>
+</div>
+<div class="mt-space-12 text-right">
+<img alt="Signature" class="ml-auto h-16 opacity-70" data-alt="An elegant, fluid handwritten signature in dark ink on a clean white background. The style is professional and authoritative yet approachable. The overall visual is minimalist and high-end, representing a personal touch from the school leadership." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7vjoPKPXclj1dmeK3SShn5C4Gj7OuiGGEintDPj94FcL6LwhMoFbEYxFHaNV-dNfDOXQA6KXT3bryyQra1m96n1q-SW32Bg6Vu0DB4TOoTu_D5QzJQ2Xo5BfyCb66xkBFFxoL3DEhxWK6wt8EaesgACkNsZRVwArNAMFXChXKPbTHFFKVCMG5vXkoXp0cKkBOuPtOeqmf2kP-5xcA9KoIbVpADi1l3Mi2l3Ki6lmLcHABJXG4V1BTFo27EVG7ncNU8z53lP1WTPs"/>
+<p class="font-text-body font-bold text-primary">Dr. Ananya Sharma</p>
+<p class="font-text-tiny text-text-tiny text-ink-500">M.A., Ph.D., Educationist</p>
+</div>
+</div>
+</section>
+<!-- Management Board Grid -->
+<section class="py-space-24 bg-primary-100">
+<div class="max-w-container-default mx-auto px-space-6">
+<h2 class="font-text-h2 text-text-h2 text-primary text-center mb-space-16">The Visionary Leadership</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-6">
+<!-- Board Member 1 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-lg mb-space-3">
+<img alt="Board Member" class="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A professional portrait of a male executive in a sharp navy suit, standing against a minimalist corporate background. The lighting is high-key and modern, reflecting a sense of leadership and trust. The overall mood is professional and organized, following the school's premium brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsdaJoFuGk56nIbq0RZp-zl9G8C50BgW6ofSaP0MSHeWkSKy_qBJgrUoOUvvdln2lcP7q_c0bmrIIOH5iO61gDawWrr1xZJkhbEzDS-IdbZwvIEOrdIXbYR8HOa5mLbtjRVEoL6G6FyxnsrFFYQ3WErpgf0l0LLqFoltbpCMHQQqygYY_4Lo9Gmft6MFYmkm8QTlXbgSQmAGE6r1_wkqT4EB8LfxT8kIbgcEMBB6sXuJDd42HtrgGfldSp1vyD-lE5E0XW3MuGiQ8"/>
+</div>
+<h4 class="font-text-h4 text-text-h4 text-primary">Vikram Mehra</h4>
+<p class="font-text-small text-text-small text-secondary">Chairman</p>
+</div>
+<!-- Board Member 2 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-lg mb-space-3">
+<img alt="Board Member" class="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A confident female leader with a professional smile, wearing a structured blazer. The setting is a bright, modern office with soft natural light. The visual style is clean and high-end, using a palette of whites and soft pinks that resonate with the school's identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPpJvoWYCz7F5-8J9NbIwa_Rdj3e_FAOKcehAcXyXeJP5ciBFHg8NdkaDP_oIFJf5aevRm0aGhr3Ro_OPFFT3IshJSzVIRIt3MK3-y9c1gbvuuVaZ0EGi_vOH0bHHU7tdjP_n5qfJVv99JRHdYXohmFgqd1pOLziEvT6tzd6_DxUZXm6FwLX6ixkmdyu8kEdchlchKS0wA37KCntXG-Bo975woG7yz94HpHUMCdL_TfuMb6nI65sT9Jf4p173LLQEo27_lt4raH4g"/>
+</div>
+<h4 class="font-text-h4 text-text-h4 text-primary">Sita Iyer</h4>
+<p class="font-text-small text-text-small text-secondary">Director of Academics</p>
+</div>
+<!-- Board Member 3 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-lg mb-space-3">
+<img alt="Board Member" class="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A middle-aged male administrator with a welcoming expression, dressed in business casual. The background is a blurred school corridor, symbolizing an active presence in the institution. The lighting is warm and natural, reinforcing the school's nurturing and family-like atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVtUPu9bnPm1UU6GN8cCJ8mlXc02MwBXMlahEDp5acZSzFA2_z64BtAeo84KMh1MFdinGKPY5S8UXg-AN8GzpnY5wB_N5zYGOJy3vTxNVCEevi6wiAoQZejORFBKovc5WCdmRtY_39ASFk1ItWmOBebvdM1D1VBgyUkPvOzhRNKolxsJMqR6Neu_HqyTk-G5HqKMUYevhBwi8GqyElJZQuBVUk_T3jZ9jYpgnYU370jZHYxB4s2PR1uOnVE2aYWEqHKXLtTKgaDo4"/>
+</div>
+<h4 class="font-text-h4 text-text-h4 text-primary">Rajesh Gupta</h4>
+<p class="font-text-small text-text-small text-secondary">Treasurer</p>
+</div>
+<!-- Board Member 4 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-lg mb-space-3">
+<img alt="Board Member" class="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A female executive with a focused and professional demeanor. She is standing in a brightly lit, modern architectural space. The lighting creates subtle shadows that add depth, while the overall aesthetic remains corporate, clean, and aligned with the brand's sophisticated tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9tDy8HQWtcQMI5KOBYc53xj5w812DzZgEphi_jzvgpeZygaHMggIdkQdT9x47KdGuZM1dh1R7WxEdijbNHHHVydKCnxmKCo5AtSfVzaF58K2_1bW4HlqlrYyx9JJyanUUi6YJ8Sy4_RxzJMbTRXnBjO0y1cifxkixRcsWFun0Dpy3w1JeeCeM61rjFDmrB3qiHVL9IA6ZLnfGIILdtjVDc0JkqIPJGiUyfYHVvhB-oOTeBYnBqAVLLtC9U0psR7HzyO0h51i3kio"/>
+</div>
+<h4 class="font-text-h4 text-text-h4 text-primary">Meera Joshi</h4>
+<p class="font-text-small text-text-small text-secondary">External Advisor</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Infrastructure & Facilities Bento Grid -->
+<section class="py-space-24">
+<div class="max-w-container-default mx-auto px-space-6">
+<div class="flex justify-between items-end mb-space-12">
+<div>
+<h2 class="font-text-h2 text-text-h2 text-primary">World-Class Facilities</h2>
+<p class="font-text-body text-text-body text-on-surface-variant max-w-lg">We provide an environment that inspires curiosity and supports exploration across every discipline.</p>
+</div>
+<button class="hidden md:flex items-center text-primary font-semibold hover:gap-2 transition-all">
+                    View Gallery <span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-space-4 h-[800px] md:h-[600px]">
+<!-- Large Classroom Card -->
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-lg">
+<img alt="Classroom" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A spacious, brightly lit modern classroom with ergonomic colorful furniture and a large interactive smart board. High ceilings and large windows let in abundant natural light, creating a bright and airy light-mode feel. The visual style is premium and highly organized, emphasizing a nurturing learning environment with subtle brand purple accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO89cFfcFr1c76WnuOvXDXhIdSeWJf0N25ICER1dMgTvPRC-mCz-Lujj7RJ-xs6amXVz4Dt5cHmXQdHPA34NccJHSEXreY9dk9BkXj-qOND7qdu8qs2Bo2OJcN7VCT-n7hN0Qnil_TGsMCVRQioShU4TNDPgBkPx_0vyvyB8WCrxviSBFKbew8KJmrtMTe6iz0FxJ-0O8qrwT3cRbF-JWsk6Lb2sB51jiIxtVSnshhbiOOYeupHPJb8mZoq3yEiWRA1Sih5XWXR-I"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-space-8 text-white">
+<h3 class="font-text-h3 text-text-h3 mb-2">Smart Classrooms</h3>
+<p class="font-text-small text-text-small text-pink-100 max-w-sm">Fully air-conditioned, tech-enabled learning spaces designed for collaboration.</p>
+</div>
+</div>
+<!-- Library Card -->
+<div class="md:col-span-2 relative group overflow-hidden rounded-lg">
+<img alt="Library" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A modern library with sleek bookshelves, comfortable reading nooks, and quiet study areas. The lighting is soft and focused, creating a peaceful and academic atmosphere. The color palette features whites, light woods, and deep purple highlights on decorative elements, maintaining a sophisticated and modern educational look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiySevfdD7jYi2Iqv-O1Ji2R39HoDkyHqGjnHv4-9MTS8XR7HAyrE7efSF3ezwMw2nKJa78-MRM2mRPkzAtOmbWx6PryT83_O92QY63UT-1MRKOEahoLrvJBiSyCFdOvZkBDUbkgoeTU68S20KPg30_phjYsuvZXZCmntymLrv0luaetTIeuIEWceBhOsBB4Z5LBIyQG38F5kVABiphUQA1cPEDx5VsSfZz_OFhU2Ifwnlwy-sLX7XY2kySTd9nwoBa4TPHMC5ZVA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-space-6 text-white">
+<h3 class="font-text-h4 text-text-h4">Digital Library</h3>
+</div>
+</div>
+<!-- Lab Card -->
+<div class="relative group overflow-hidden rounded-lg">
+<img alt="Science Lab" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A state-of-the-art science laboratory with clean white benches and modern scientific equipment. The room is illuminated by bright, cool-toned lighting that emphasizes cleanliness and precision. The overall mood is professional and advanced, utilizing a crisp light-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy802vtYZI8FqlPV1-m5iYkb68DW2kripeSLpc5aNBEGeAtpY5BsVYvMOH6SmEw9qCsPdahkYzbLRIK8ZHUNGRCjofMXw0ODNd4EDEs3u2QKffFwO27RowL7QfsYbgnxwURz_MKVW8Kp_2jlC0WHckYvWetVJU3nfkVvBLscOtQfP1FIfTVhWHjjGIECadIsX4Tnm50wZTVKqjcr0Z-qUaYi6wXY7usetz7Vsmp8cjG-YsZsKIexrE2Rebuj3uips5XQIvuuin2Qk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-space-4 text-white">
+<h3 class="font-text-small font-bold">Advanced Labs</h3>
+</div>
+</div>
+<!-- Sports Card -->
+<div class="relative group overflow-hidden rounded-lg">
+<img alt="Sports Complex" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A vibrant, modern indoor sports complex with polished wooden flooring and bright skylights. The lighting is high-key and energetic, showcasing a dynamic athletic environment. The palette is dominated by neutral tones with pops of gold and purple, reflecting the school's brand identity in a sporty context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB31A3wNxEAmKdHd0bdmwmMPSIoNyKh37Qj1L-Ck14w0hdaeeBudJR4x9oMHizE2falNcn_WV_A347tXL7QhntVjqju5cB6yKUQzgJyaZKRiMWjBii5wLH0a4HwXzETeIQcN345qaHcKukaKk7_JZGb7qSuIc9n3nnD_RfZUZEFbEZpHDt9EUWrDVfmmFjq3MnrVrxs1xkcaGkMq_O1-NSbciqIy8lk0bn186bPHEG0Z1I910JceXLt68pdIZJ2Aqu9htSROFN-8-0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-space-4 text-white">
+<h3 class="font-text-small font-bold">Sports Arena</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-space-24 bg-secondary text-on-secondary text-center">
+<div class="max-w-container-narrow mx-auto px-space-6">
+<h2 class="font-text-h2 text-text-h2 mb-space-6">Join the Gurukul Family Today</h2>
+<p class="font-text-body text-text-body mb-space-8 opacity-90">Admissions are now open for the academic year 2024-25. Secure your child's future with a legacy of excellence.</p>
+<div class="flex flex-col sm:flex-row gap-space-4 justify-center">
+<button class="bg-gold-300 text-on-primary-fixed px-space-8 py-space-3 rounded-full font-bold hover:scale-105 transition-all shadow-lg">Download Prospectus</button>
+<button class="border-2 border-white text-white px-space-8 py-space-3 rounded-full font-bold hover:bg-white hover:text-secondary transition-all">Book a Campus Tour</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-on-primary-fixed full-width relative mt-space-32 border-t border-primary-container">
+<div class="w-full pt-space-16 pb-space-8 px-space-6 max-w-container-default mx-auto grid grid-cols-1 md:grid-cols-4 gap-space-12">
+<div class="md:col-span-1">
+<div class="font-text-h3 font-bold text-gold-300 mb-space-6">Gurukul Academy</div>
+<p class="text-pink-100 font-text-small text-text-small mb-space-6">Nurturing wisdom and excellence since 1992. Join us in our mission to shape the leaders of tomorrow.</p>
+<div class="flex gap-space-4">
+<span class="material-symbols-outlined text-gold-300 cursor-pointer hover:scale-110 transition-all" data-icon="facebook">Notebook</span>
+<span class="material-symbols-outlined text-gold-300 cursor-pointer hover:scale-110 transition-all" data-icon="instagram">retweet</span>
+<span class="material-symbols-outlined text-gold-300 cursor-pointer hover:scale-110 transition-all" data-icon="youtube_activity">youtube_activity</span>
+</div>
+</div>
+<div>
+<h4 class="font-text-h4 text-text-h4 text-on-primary mb-space-6">Quick Links</h4>
+<ul class="space-y-space-3 text-pink-100 font-text-small text-text-small">
+<li><a class="hover:text-white hover:underline decoration-gold-300 underline-offset-4 transition-all" href="#">About Us</a></li>
+<li><a class="hover:text-white hover:underline decoration-gold-300 underline-offset-4 transition-all" href="#">Admissions</a></li>
+<li><a class="hover:text-white hover:underline decoration-gold-300 underline-offset-4 transition-all" href="#">Academic Calendar</a></li>
+<li><a class="hover:text-white hover:underline decoration-gold-300 underline-offset-4 transition-all" href="#">Careers</a></li>
+<li><a class="hover:text-white hover:underline decoration-gold-300 underline-offset-4 transition-all" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-text-h4 text-text-h4 text-on-primary mb-space-6">Academics</h4>
+<ul class="space-y-space-3 text-pink-100 font-text-small text-text-small">
+<li><a class="hover:text-white hover:underline decoration-gold-300 underline-offset-4 transition-all" href="#">Primary Wing</a></li>
+<li><a class="hover:text-white hover:underline decoration-gold-300 underline-offset-4 transition-all" href="#">Secondary Wing</a></li>
+<li><a class="hover:text-white hover:underline decoration-gold-300 underline-offset-4 transition-all" href="#">Co-curricular Activities</a></li>
+<li><a class="hover:text-white hover:underline decoration-gold-300 underline-offset-4 transition-all" href="#">Sports Program</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-text-h4 text-text-h4 text-on-primary mb-space-6">Contact Us</h4>
+<div class="space-y-space-4 text-pink-100 font-text-small text-text-small">
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-gold-300" data-icon="location_on">location_on</span> 123 Knowledge Park, Education Valley, India</p>
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-gold-300" data-icon="phone">phone</span> +91 123 456 7890</p>
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-gold-300" data-icon="mail">mail</span> info@gurukulacademy.edu</p>
+</div>
+</div>
+</div>
+<div class="border-t border-primary-container max-w-container-default mx-auto mt-space-12 py-space-6 px-space-6 text-center text-pink-100/60 font-text-tiny text-text-tiny">
+            © 2024 Gurukul Academy. All Rights Reserved.
+        </div>
+</footer>
+</body></html>

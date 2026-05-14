@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#5f1544",
+                    "on-primary-fixed": "#3c0029",
+                    "gold-300": "#F0CF65",
+                    "tertiary-fixed-dim": "#9dd67d",
+                    "secondary-container": "#fd519e",
+                    "on-secondary-fixed-variant": "#8d004e",
+                    "surface-variant": "#eddfe3",
+                    "primary-fixed-dim": "#ffafd7",
+                    "on-tertiary-fixed": "#072100",
+                    "pink-100": "#FDF2F8",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#ffd9e3",
+                    "on-tertiary-container": "#91c972",
+                    "ink-100": "#F5F5F5",
+                    "primary-900": "#5C1F46",
+                    "surface-container": "#f9eaef",
+                    "tertiary": "#133c00",
+                    "primary-container": "#7b2d5c",
+                    "background": "#fff8f8",
+                    "surface-tint": "#934171",
+                    "surface-dim": "#e5d6db",
+                    "on-background": "#211a1d",
+                    "on-surface": "#211a1d",
+                    "outline-variant": "#d7c1c9",
+                    "on-secondary-fixed": "#3e001f",
+                    "secondary-fixed-dim": "#ffb0ca",
+                    "inverse-primary": "#ffafd7",
+                    "gold-500": "#D4A017",
+                    "surface-container-low": "#fff0f4",
+                    "surface": "#fff8f8",
+                    "tertiary-fixed": "#b8f396",
+                    "primary-fixed": "#ffd8e9",
+                    "primary-100": "#F5E8EF",
+                    "surface-container-high": "#f3e4e9",
+                    "pink-300": "#FAD2E1",
+                    "inverse-surface": "#372e32",
+                    "surface-bright": "#fff8f8",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#24550a",
+                    "inverse-on-surface": "#fcedf1",
+                    "ink-900": "#1A1A1A",
+                    "ink-500": "#737373",
+                    "surface-container-highest": "#eddfe3",
+                    "on-error": "#ffffff",
+                    "gold-100": "#FBF4D9",
+                    "primary-500": "#9C4878",
+                    "ink-700": "#404040",
+                    "outline": "#84727a",
+                    "on-primary-container": "#fe9bd0",
+                    "on-surface-variant": "#524349",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#205106",
+                    "secondary": "#b60d68",
+                    "on-secondary-container": "#5c0031",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#772958",
+                    "on-tertiary": "#ffffff",
+                    "ink-300": "#D4D4D4",
+                    "primary-300": "#D4A8C3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "space-8": "32px",
+                    "space-1": "4px",
+                    "container-wide": "1440px",
+                    "space-12": "48px",
+                    "space-4": "16px",
+                    "container-narrow": "720px",
+                    "space-32": "128px",
+                    "space-6": "24px",
+                    "space-3": "12px",
+                    "space-16": "64px",
+                    "space-2": "8px",
+                    "space-24": "96px",
+                    "container-default": "1200px"
+            },
+            "fontFamily": {
+                    "text-h3": ["Poppins"],
+                    "text-hero-mobile": ["Poppins"],
+                    "text-h4": ["Poppins"],
+                    "text-tiny": ["Inter"],
+                    "text-lead": ["Inter"],
+                    "text-h1": ["Poppins"],
+                    "text-hero": ["Poppins"],
+                    "text-body": ["Inter"],
+                    "text-h2": ["Poppins"],
+                    "text-small": ["Inter"]
+            },
+            "fontSize": {
+                    "text-h3": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "text-hero-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "text-h4": ["22px", {"lineHeight": "30px", "fontWeight": "600"}],
+                    "text-tiny": ["12px", {"lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "500"}],
+                    "text-lead": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "text-h1": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                    "text-hero": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "text-body": ["16px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "text-h2": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                    "text-small": ["14px", {"lineHeight": "22px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-blob {
+            filter: blur(80px);
+            opacity: 0.15;
+            position: absolute;
+            z-index: -1;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #5f1544 0%, #b60d68 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-surface font-text-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed-variant">
+<!-- TopNavBar -->
+<header class="docked full-width top-0 sticky z-50 bg-surface shadow-sm hover:shadow-md transition-shadow duration-300">
+<div class="flex justify-between items-center w-full max-w-container-default mx-auto px-space-6 h-20">
+<div class="flex items-center">
+<span class="font-text-h4 font-bold text-primary tracking-tight">Gurukul Academy</span>
+</div>
+<nav class="hidden md:flex gap-space-8 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-text-body text-text-body" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-text-body text-text-body" href="#">About Us</a>
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 font-text-body text-text-body" href="#">Academics</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-text-body text-text-body" href="#">Admissions</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-text-body text-text-body" href="#">Life @ School</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-text-body text-text-body" href="#">Contact</a>
+</nav>
+<button class="bg-primary text-on-primary px-space-6 py-space-3 rounded-full font-text-small font-semibold hover:translate-y-[-1px] transition-all shadow-sm hover:shadow-md active:scale-95">
+                Apply Now
+            </button>
+</div>
+</header>
+<main class="relative overflow-hidden">
+<!-- Background Blobs -->
+<div class="soft-blob bg-primary w-[500px] h-[500px] -top-24 -left-24 rounded-full"></div>
+<div class="soft-blob bg-gold-300 w-[400px] h-[400px] top-[20%] -right-24 rounded-full"></div>
+<!-- Hero Section -->
+<section class="max-w-container-default mx-auto px-space-6 pt-space-24 pb-space-16">
+<div class="max-w-container-narrow">
+<span class="bg-primary-100 text-primary px-4 py-1 rounded-full text-tiny font-text-tiny uppercase tracking-widest mb-space-4 inline-block">Excellence in Education</span>
+<h1 class="font-text-h1 text-text-h1 text-primary mb-space-6 leading-tight">Nurturing Wisdom through Modern Pedagogies</h1>
+<p class="font-text-lead text-text-lead text-on-surface-variant">Our academic framework is a thoughtful integration of traditional values and global educational standards, designed to inspire lifelong learning.</p>
+</div>
+</section>
+<!-- Curriculum Overview -->
+<section class="max-w-container-default mx-auto px-space-6 py-space-24">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-16 items-center">
+<div class="relative rounded-lg overflow-hidden shadow-lg group">
+<img class="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A brightly lit, modern library interior where students are engaged in collaborative learning. Warm sunlight streams through large windows, highlighting the rich textures of wooden bookshelves and soft seating. The atmosphere is quiet yet vibrant, reflecting a professional and premium educational environment with a sophisticated primary purple and white color scheme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWiJXgTcR4hJisATfGc7o61CW-pZovHTbCUL2DIT6yjq8oX1E7Mlr_AZ72pXhceTyEs2QD_NHqvciCbdj-9CgasINJmovO5cRJKstvn7bTYYUzR0GQSpMTexGBFdzVbWo6JbpakxbIha3JxtVWb7-024HDlnttqtIGb1Wai3rqAx2-iqAQtiAhT768xIZETy_yDLyCUtvLmGWtkAKvuPcKnwGkGnGdpdTE2WCHl5kzPFQJwnwr9lQWskvPnrbw3coQia73ApdMj8U"/>
+</div>
+<div class="space-y-space-6">
+<h2 class="font-text-h2 text-text-h2 text-primary">Curriculum Overview</h2>
+<p class="font-text-body text-text-body text-on-surface-variant">Gurukul Academy strictly follows the national curriculum prescribed by the **Curriculum Development Centre (CDC)** and the **National Examination Board (NEB)** of Nepal. Our approach enhances this core with international best practices to ensure global competency.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-4">
+<div class="p-space-4 bg-white rounded-lg shadow-sm border-l-4 border-primary">
+<h4 class="font-text-h4 text-[18px] text-primary mb-2">NEB Alignment</h4>
+<p class="text-text-small text-on-surface-variant">Fully compliant with Secondary Education Examination (SEE) and Grade 12 board standards.</p>
+</div>
+<div class="p-space-4 bg-white rounded-lg shadow-sm border-l-4 border-gold-500">
+<h4 class="font-text-h4 text-[18px] text-primary mb-2">CDC Framework</h4>
+<p class="text-text-small text-on-surface-variant">Core subjects integrated with skill-based learning and local cultural context.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Academic Levels Bento Grid -->
+<section class="bg-primary-100 py-space-24">
+<div class="max-w-container-default mx-auto px-space-6">
+<div class="text-center mb-space-16">
+<h2 class="font-text-h2 text-text-h2 text-primary">Academic Levels</h2>
+<p class="max-w-2xl mx-auto mt-4 text-on-surface-variant">A progressive journey of discovery from early childhood to secondary mastery.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-6">
+<!-- ECD / Montessori -->
+<div class="md:col-span-8 bg-white rounded-lg p-space-8 shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row gap-space-8 overflow-hidden group">
+<div class="md:w-1/2">
+<span class="text-primary font-bold text-tiny uppercase tracking-widest mb-2 block">Foundation</span>
+<h3 class="font-text-h3 text-text-h3 text-primary mb-4">ECD &amp; Montessori</h3>
+<p class="text-on-surface-variant mb-6">Our Early Childhood Development program uses the Montessori method to foster independence, curiosity, and sensory development in a nurturing environment.</p>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-text-small text-on-surface-variant"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Play-based learning</li>
+<li class="flex items-center gap-2 text-text-small text-on-surface-variant"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Motor skill development</li>
+<li class="flex items-center gap-2 text-text-small text-on-surface-variant"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Creative expression</li>
+</ul>
+</div>
+<div class="md:w-1/2">
+<img class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" data-alt="A warm, brightly lit Montessori classroom with wooden toys, colorful sensory materials, and soft lighting. The space is organized and inviting, with child-sized furniture and an emphasis on organic textures. The color palette features soft pinks, warm yellows, and deep purples, creating a sense of calm and focused creativity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyo9A6M4QNk60LSIbnsbZeRHY2L4GAOglxY4Q1Mhdb-dpLESGnbsMfJcMJfbIQ81YoT4iynArkJp7RX6xsDZjqhXwZRR1MJjFKVu0gCMoAjgNrilUo2qRRkwj3Qkx2RVIfvmqsGyhYp6xIoocF0vcs57s6NayYG2Y7zGBWYdMQz0OFEBXQCTJ2aZlJfT7eEyudRDK0Rt_VR8MKrPgS3YvMqg8x-39i1naZbz9zztjlHBD6aQMmq_D8I-hfNby-iGHgvxUDoB8chFY"/>
+</div>
+</div>
+<!-- Academic Calendar Small -->
+<div class="md:col-span-4 bg-primary text-on-primary rounded-lg p-space-8 shadow-sm flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-gold-300 text-[48px] mb-4">calendar_month</span>
+<h3 class="font-text-h3 text-text-h3 mb-2">2024 Calendar</h3>
+<p class="text-pink-100 text-text-small">Stay updated with our school events, holidays, and examination schedules.</p>
+</div>
+<a class="mt-8 flex items-center justify-between bg-gold-300 text-primary-900 px-space-6 py-space-4 rounded-lg font-bold hover:bg-white transition-colors group" href="#">
+                            Download PDF
+                            <span class="material-symbols-outlined group-hover:translate-y-1 transition-transform">download</span>
+</a>
+</div>
+<!-- Basic Level -->
+<div class="md:col-span-6 bg-white rounded-lg p-space-8 shadow-sm hover:shadow-md transition-all group border-t-8 border-secondary">
+<span class="text-secondary font-bold text-tiny uppercase tracking-widest mb-2 block">Primary Growth</span>
+<h3 class="font-text-h3 text-text-h3 text-primary mb-4">Basic Level (Grade 1-8)</h3>
+<p class="text-on-surface-variant mb-6">Focusing on core literacy, numeracy, and social-emotional intelligence through an inquiry-based curriculum.</p>
+<img class="w-full h-48 object-cover rounded-lg mb-4 group-hover:opacity-90" data-alt="Young primary school students in a clean, modern classroom environment, engaged in a hands-on science experiment with bright, colorful liquids. The scene is lit with natural daylight, creating a soft and inspiring atmosphere. The background shows educational posters in a sophisticated design style that matches the school's premium purple and gold branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8U00N6b6QV20G2oaZufCbLqspIcEwqdF7Lvup2Lqjw2mU7g2LjebhieUfRHHNlFMd1h_KyHkhkKUQpsryqqfZ6JSRjOtbu06dYVcBIBHRwQaU5DE424xMa0RLB7N6cQaP9FfJUr9f0XPtGnHCSykVjOwnQ24fPWijMotr7kLizFZM_VKUaPDFaSlOOOXN3v2BXPvx3f8fgYRBc2Rk0BsYYC1hLYrzHhxCEi5F7M0AhaQi5ScuJn6UlJ_Sy1fX1SVLUKSh4N7B9Y0"/>
+</div>
+<!-- Secondary Level -->
+<div class="md:col-span-6 bg-white rounded-lg p-space-8 shadow-sm hover:shadow-md transition-all group border-t-8 border-gold-500">
+<span class="text-gold-500 font-bold text-tiny uppercase tracking-widest mb-2 block">Secondary Mastery</span>
+<h3 class="font-text-h3 text-text-h3 text-primary mb-4">Secondary Level (9-10)</h3>
+<p class="text-on-surface-variant mb-6">Rigorous academic preparation for the SEE, with an emphasis on critical thinking, career counseling, and leadership.</p>
+<img class="w-full h-48 object-cover rounded-lg mb-4 group-hover:opacity-90" data-alt="High school students in a modern computer lab or laboratory setting, working intently on laptops and scientific equipment. The lighting is crisp and professional, using high-key studio lighting that emphasizes cleanliness and innovation. The setting reflects a high-tech, forward-thinking academic environment with deep purple and light gray tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjpqMjgrjs6BnF68yrGg5ncoLZIPpQlhJsu1ApMD1O6E1KxKbwgEGsH71bAf8MkTp_CkVaGg0cG_a41QovKeR5XA_1u6jDJdZpwjAQl4ExaS7Co8jIuXv5IYyGG44T4VDVE3Xq17fEcqXD6nQomnqUVoSa1kyMCLDs9YodWXavoqodcXyEefbbYA0eP3UUpO1mKBx5LEwy077aSRRhQ85yfUeTIWfTrrmRnZp71bKAO56UsU-YL_tD81brES_xauoafGLqtqOOwwU"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Teaching Methodology & Assessment -->
+<section class="max-w-container-default mx-auto px-space-6 py-space-32">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-24">
+<!-- Methodology -->
+<div>
+<h2 class="font-text-h2 text-text-h2 text-primary mb-space-8">Teaching Methodology</h2>
+<div class="space-y-space-6">
+<div class="flex gap-space-6 items-start">
+<div class="bg-pink-100 p-4 rounded-xl">
+<span class="material-symbols-outlined text-primary text-[32px]">psychology</span>
+</div>
+<div>
+<h4 class="font-text-h4 text-text-h4 text-primary">Inquiry-Based Learning</h4>
+<p class="text-on-surface-variant">We encourage students to ask 'why' and 'how', moving beyond rote memorization to deep conceptual understanding.</p>
+</div>
+</div>
+<div class="flex gap-space-6 items-start">
+<div class="bg-pink-100 p-4 rounded-xl">
+<span class="material-symbols-outlined text-primary text-[32px]">groups</span>
+</div>
+<div>
+<h4 class="font-text-h4 text-text-h4 text-primary">Collaborative Projects</h4>
+<p class="text-on-surface-variant">Students work in diverse teams to solve real-world problems, building communication and leadership skills.</p>
+</div>
+</div>
+<div class="flex gap-space-6 items-start">
+<div class="bg-pink-100 p-4 rounded-xl">
+<span class="material-symbols-outlined text-primary text-[32px]">laptop_mac</span>
+</div>
+<div>
+<h4 class="font-text-h4 text-text-h4 text-primary">Digital Integration</h4>
+<p class="text-on-surface-variant">Smart classrooms and digital resources are leveraged to enhance traditional classroom teaching.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Assessment -->
+<div class="bg-surface-container rounded-3xl p-space-12 relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-text-h2 text-text-h2 text-primary mb-space-6">Assessment Pattern</h2>
+<p class="text-on-surface-variant mb-space-8">Our evaluation system is continuous and comprehensive, focusing on both academic achievement and holistic development.</p>
+<div class="space-y-space-4">
+<div class="bg-white p-space-4 rounded-lg flex items-center justify-between shadow-sm">
+<span class="font-semibold text-primary">Formative Assessment</span>
+<span class="text-text-small bg-primary-100 text-primary px-3 py-1 rounded-full">Weekly/Ongoing</span>
+</div>
+<div class="bg-white p-space-4 rounded-lg flex items-center justify-between shadow-sm">
+<span class="font-semibold text-primary">Term Examinations</span>
+<span class="text-text-small bg-primary-100 text-primary px-3 py-1 rounded-full">Trimester Basis</span>
+</div>
+<div class="bg-white p-space-4 rounded-lg flex items-center justify-between shadow-sm">
+<span class="font-semibold text-primary">Holistic Reports</span>
+<span class="text-text-small bg-primary-100 text-primary px-3 py-1 rounded-full">Skills &amp; Behavior</span>
+</div>
+<div class="bg-white p-space-4 rounded-lg flex items-center justify-between shadow-sm">
+<span class="font-semibold text-primary">Pre-Board (Grade 10)</span>
+<span class="text-text-small bg-gold-300 text-on-primary-fixed px-3 py-1 rounded-full">Final Preparation</span>
+</div>
+</div>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-12 -right-12 w-48 h-48 bg-primary opacity-5 rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="max-w-container-default mx-auto px-space-6 pb-space-32">
+<div class="bg-primary-900 rounded-3xl p-space-16 text-center text-on-primary relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-text-h2 text-text-h2 mb-space-4">Ready to join our academic community?</h2>
+<p class="text-pink-100 max-w-2xl mx-auto mb-space-8">Admissions are now open for the upcoming academic session. Experience the Gurukul difference.</p>
+<div class="flex flex-col sm:flex-row gap-space-4 justify-center">
+<button class="bg-gold-300 text-primary-900 px-space-8 py-space-4 rounded-full font-bold hover:scale-105 transition-transform">Inquire Now</button>
+<button class="border-2 border-white text-white px-space-8 py-space-4 rounded-full font-bold hover:bg-white hover:text-primary-900 transition-all">Visit Campus</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary full-width relative mt-space-32 border-t border-primary-container">
+<div class="w-full pt-space-16 pb-space-8 px-space-6 max-w-container-default mx-auto grid grid-cols-1 md:grid-cols-4 gap-space-12 text-on-primary">
+<div class="md:col-span-1">
+<span class="font-text-h3 font-bold text-gold-300 block mb-6">Gurukul Academy</span>
+<p class="text-pink-100 text-text-small">Nurturing wisdom and fostering excellence in a modern learning environment rooted in traditional values.</p>
+</div>
+<div>
+<h4 class="font-text-h4 text-text-h4 text-white mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="text-pink-100 hover:text-white transition-colors hover:underline decoration-gold-300 underline-offset-4 text-text-small" href="#">About Us</a></li>
+<li><a class="text-gold-300 font-bold text-text-small" href="#">Academics</a></li>
+<li><a class="text-pink-100 hover:text-white transition-colors hover:underline decoration-gold-300 underline-offset-4 text-text-small" href="#">Admissions</a></li>
+<li><a class="text-pink-100 hover:text-white transition-colors hover:underline decoration-gold-300 underline-offset-4 text-text-small" href="#">Academic Calendar</a></li>
+<li><a class="text-pink-100 hover:text-white transition-colors hover:underline decoration-gold-300 underline-offset-4 text-text-small" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-text-h4 text-text-h4 text-white mb-6">Contact Us</h4>
+<p class="text-pink-100 text-text-small mb-2">Ghorahi, Dang, Nepal</p>
+<p class="text-pink-100 text-text-small mb-2">+977-82-560XXX</p>
+<p class="text-pink-100 text-text-small">info@gurukul.edu.np</p>
+</div>
+<div>
+<h4 class="font-text-h4 text-text-h4 text-white mb-6">Newsletter</h4>
+<p class="text-pink-100 text-text-small mb-4">Stay updated with our latest news and events.</p>
+<div class="flex gap-2">
+<input class="bg-primary-container border-none rounded-lg px-4 py-2 text-white w-full focus:ring-2 focus:ring-gold-300" placeholder="Email address" type="email"/>
+<button class="bg-gold-300 text-primary p-2 rounded-lg"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</div>
+<div class="w-full border-t border-primary-container mt-space-12 pt-space-8 pb-space-8 px-space-6 max-w-container-default mx-auto text-center">
+<p class="text-pink-100 text-text-small">© 2024 Gurukul Academy. All Rights Reserved.</p>
+</div>
+</footer>
+</body></html>

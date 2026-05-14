@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>News &amp; Notices | Gurukul Academy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-blob {
+            filter: blur(80px);
+            z-index: -1;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#5f1544",
+                      "on-primary-fixed": "#3c0029",
+                      "gold-300": "#F0CF65",
+                      "tertiary-fixed-dim": "#9dd67d",
+                      "secondary-container": "#fd519e",
+                      "on-secondary-fixed-variant": "#8d004e",
+                      "surface-variant": "#eddfe3",
+                      "primary-fixed-dim": "#ffafd7",
+                      "on-tertiary-fixed": "#072100",
+                      "pink-100": "#FDF2F8",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "secondary-fixed": "#ffd9e3",
+                      "on-tertiary-container": "#91c972",
+                      "ink-100": "#F5F5F5",
+                      "primary-900": "#5C1F46",
+                      "surface-container": "#f9eaef",
+                      "tertiary": "#133c00",
+                      "primary-container": "#7b2d5c",
+                      "background": "#fff8f8",
+                      "surface-tint": "#934171",
+                      "surface-dim": "#e5d6db",
+                      "on-background": "#211a1d",
+                      "on-surface": "#211a1d",
+                      "outline-variant": "#d7c1c9",
+                      "on-secondary-fixed": "#3e001f",
+                      "secondary-fixed-dim": "#ffb0ca",
+                      "inverse-primary": "#ffafd7",
+                      "gold-500": "#D4A017",
+                      "surface-container-low": "#fff0f4",
+                      "surface": "#fff8f8",
+                      "tertiary-fixed": "#b8f396",
+                      "primary-fixed": "#ffd8e9",
+                      "primary-100": "#F5E8EF",
+                      "surface-container-high": "#f3e4e9",
+                      "pink-300": "#FAD2E1",
+                      "inverse-surface": "#372e32",
+                      "surface-bright": "#fff8f8",
+                      "on-secondary": "#ffffff",
+                      "tertiary-container": "#24550a",
+                      "inverse-on-surface": "#fcedf1",
+                      "ink-900": "#1A1A1A",
+                      "ink-500": "#737373",
+                      "surface-container-highest": "#eddfe3",
+                      "on-error": "#ffffff",
+                      "gold-100": "#FBF4D9",
+                      "primary-500": "#9C4878",
+                      "ink-700": "#404040",
+                      "outline": "#84727a",
+                      "on-primary-container": "#fe9bd0",
+                      "on-surface-variant": "#524349",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#205106",
+                      "secondary": "#b60d68",
+                      "on-secondary-container": "#5c0031",
+                      "on-error-container": "#93000a",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed-variant": "#772958",
+                      "on-tertiary": "#ffffff",
+                      "ink-300": "#D4D4D4",
+                      "primary-300": "#D4A8C3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "space-8": "32px",
+                      "space-1": "4px",
+                      "container-wide": "1440px",
+                      "space-12": "48px",
+                      "space-4": "16px",
+                      "container-narrow": "720px",
+                      "space-32": "128px",
+                      "space-6": "24px",
+                      "space-3": "12px",
+                      "space-16": "64px",
+                      "space-2": "8px",
+                      "space-24": "96px",
+                      "container-default": "1200px"
+              },
+              "fontFamily": {
+                      "text-h3": ["Poppins"],
+                      "text-hero-mobile": ["Poppins"],
+                      "text-h4": ["Poppins"],
+                      "text-tiny": ["Inter"],
+                      "text-lead": ["Inter"],
+                      "text-h1": ["Poppins"],
+                      "text-hero": ["Poppins"],
+                      "text-body": ["Inter"],
+                      "text-h2": ["Poppins"],
+                      "text-small": ["Inter"]
+              },
+              "fontSize": {
+                      "text-h3": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                      "text-hero-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "text-h4": ["22px", {"lineHeight": "30px", "fontWeight": "600"}],
+                      "text-tiny": ["12px", {"lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "500"}],
+                      "text-lead": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+                      "text-h1": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                      "text-hero": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "text-body": ["16px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "text-h2": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                      "text-small": ["14px", {"lineHeight": "22px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface min-h-screen selection:bg-primary-100 selection:text-primary overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="docked full-width top-0 sticky z-50 bg-surface dark:bg-background shadow-sm hover:shadow-md transition-shadow duration-300">
+<nav class="flex justify-between items-center w-full max-w-container-default mx-auto px-space-6 h-20">
+<div class="flex items-center gap-2">
+<span class="font-text-h4 font-bold text-primary dark:text-primary-fixed-dim tracking-tight">Gurukul Academy</span>
+</div>
+<div class="hidden md:flex items-center gap-space-8">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-text-body text-text-body" href="index.html">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-text-body text-text-body" href="about.html">About Us</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-text-body text-text-body" href="academics.html">Academics</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-text-body text-text-body" href="admissions.html">Admissions</a>
+<a class="text-primary dark:text-primary-fixed-dim font-semibold border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-text-body text-text-body" href="faculty.html">Life @ School</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-text-body text-text-body" href="contact.html">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-space-6 py-space-2 rounded-lg font-text-small font-semibold hover:translate-y-[-1px] transition-all active:scale-95">Apply Now</button>
+</nav>
+</header>
+<main class="relative">
+<!-- Background Decorations -->
+<div class="absolute top-20 right-[-10%] w-[500px] h-[500px] bg-primary-100 rounded-full soft-blob opacity-50"></div>
+<div class="absolute top-[600px] left-[-10%] w-[400px] h-[400px] bg-pink-100 rounded-full soft-blob opacity-50"></div>
+<!-- Hero Section -->
+<section class="max-w-container-default mx-auto px-space-6 pt-space-24 pb-space-16 text-center">
+<div class="inline-flex items-center gap-2 bg-gold-100 text-on-tertiary-fixed-variant px-4 py-1.5 rounded-full mb-space-6">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+<span class="font-text-tiny uppercase tracking-widest font-bold">Announcements</span>
+</div>
+<h1 class="font-text-h1 text-text-h1 text-on-background mb-space-6">News &amp; Notices</h1>
+<p class="font-text-lead text-text-lead text-on-surface-variant max-w-container-narrow mx-auto">
+                Stay updated with the latest happenings, official announcements, academic results, and holiday schedules at Gurukul Academy.
+            </p>
+</section>
+<!-- Filter Bar -->
+<section class="max-w-container-default mx-auto px-space-6 mb-space-12">
+<div class="bg-surface-container rounded-2xl p-space-4 flex flex-wrap items-center justify-center gap-space-4 shadow-sm border border-outline-variant/30">
+<button class="px-space-6 py-space-3 rounded-xl font-semibold transition-all bg-primary text-on-primary shadow-md">All Updates</button>
+<button class="px-space-6 py-space-3 rounded-xl font-semibold transition-all text-on-surface-variant hover:bg-white/50">Notices</button>
+<button class="px-space-6 py-space-3 rounded-xl font-semibold transition-all text-on-surface-variant hover:bg-white/50">School News</button>
+<button class="px-space-6 py-space-3 rounded-xl font-semibold transition-all text-on-surface-variant hover:bg-white/50">Holidays</button>
+<button class="px-space-6 py-space-3 rounded-xl font-semibold transition-all text-on-surface-variant hover:bg-white/50">Exam Results</button>
+</div>
+</section>
+<!-- News Grid -->
+<section class="max-w-container-default mx-auto px-space-6 pb-space-24">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-8">
+<!-- Notice Card -->
+<article class="group bg-white rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A bright, sunlit hallway of a modern school with high ceilings and large windows. The interior design is minimal with warm wood accents and deep purple architectural details. Professional lighting highlights the clean, organized environment, creating an atmosphere of focus and academic excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3QH9TfF54y_mRLB-Z3x0S_bpQddJW1Mv_vDe9YzvabsA6fI_C-2s3QRvU8l17bnflXhIJH1Uf9pivRTz8-iRMT-lKY6r7II45RFNOY8AvD62ndgqQE3rp0WMzb3hk9EGXK8sc35DBbhFUfyH9xPkqRkVg3B1N7r2tDNTGvPD2Sd3aJsWukUyDXGId_lrzvE8RuSyl4JPBLLSBW6pifSVIFuCcNRFhydrXgD2YP2a5ZOuqS_4euxrZ9ZJnf6_cP31RH0Uus40jIJ4"/>
+<div class="absolute top-4 left-4 flex flex-col items-center justify-center w-14 h-16 bg-gold-300 rounded-lg shadow-md text-on-primary-fixed">
+<span class="font-text-h4 font-bold leading-none">12</span>
+<span class="font-text-tiny uppercase font-bold">Oct</span>
+</div>
+<div class="absolute top-4 right-4 bg-primary text-on-primary px-3 py-1 rounded-full text-text-tiny font-bold uppercase tracking-wider">
+                            Notice
+                        </div>
+</div>
+<div class="p-space-6 flex flex-col flex-grow">
+<h3 class="font-text-h4 text-text-h4 text-on-background mb-space-3 group-hover:text-primary transition-colors">Inter-School Science Fair 2024</h3>
+<p class="font-text-body text-text-small text-on-surface-variant mb-space-6 line-clamp-3">
+                            Gurukul Academy is proud to host the upcoming Science Fair. Students from Grades 8-12 are invited to register their innovative projects before the end of this month.
+                        </p>
+<div class="mt-auto flex items-center justify-between">
+<a class="text-primary font-semibold flex items-center gap-1 group/link" href="#">
+                                Read More 
+                                <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<span class="text-ink-500 font-text-tiny">2 min read</span>
+</div>
+</div>
+</article>
+<!-- Holiday Card -->
+<article class="group bg-white rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up of vibrant festive decorations featuring marigolds and oil lamps on a traditional patterned floor. The colors are warm and inviting, dominated by golden yellows and soft pinks. The photography is professional with a shallow depth of field, emphasizing the cultural richness and warm celebration mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx0CDXw3B4Wgx-cVwe3T42YpaONGh8MJR8on84MYjcdwDLsrnRAHYe4nZvlAsCbg4CF5litl457AWxQ0TjSddeopqogU54AA4HrMPzRTQk_zkEHF-hJdqMJ_7uPqjZhi2E4cecOxOdzGAYgVHHzvKKh3D8Lj-aWUtL-2sbTZU7xXr8_i17fnZpak8pgbjwUgzPR0qsPT3pDbnPmx9N18G9QCoV37nj8t7o6_T6NnEHhbSAXVLiAsT7pvWenNrXVr1xbyq6NMht1YU"/>
+<div class="absolute top-4 left-4 flex flex-col items-center justify-center w-14 h-16 bg-gold-300 rounded-lg shadow-md text-on-primary-fixed">
+<span class="font-text-h4 font-bold leading-none">28</span>
+<span class="font-text-tiny uppercase font-bold">Oct</span>
+</div>
+<div class="absolute top-4 right-4 bg-secondary text-on-primary px-3 py-1 rounded-full text-text-tiny font-bold uppercase tracking-wider">
+                            Holiday
+                        </div>
+</div>
+<div class="p-space-6 flex flex-col flex-grow">
+<h3 class="font-text-h4 text-text-h4 text-on-background mb-space-3 group-hover:text-primary transition-colors">Deepavali Break Announcement</h3>
+<p class="font-text-body text-text-small text-on-surface-variant mb-space-6 line-clamp-3">
+                            The academy will remain closed from Oct 28 to Nov 3 for the festival of lights. We wish all our students and parents a safe and joyous celebration.
+                        </p>
+<div class="mt-auto flex items-center justify-between">
+<a class="text-primary font-semibold flex items-center gap-1 group/link" href="#">
+                                Read More 
+                                <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<span class="text-ink-500 font-text-tiny">1 min read</span>
+</div>
+</div>
+</article>
+<!-- Result Card -->
+<article class="group bg-white rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A focused close-up of a student's hand holding a pen over a neatly written exam paper. The lighting is bright and clear, emphasizing academic discipline. The color palette is composed of clean whites and the school's signature purple ink tones, conveying a sense of achievement and milestone evaluation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRgdX6NOU2LUNfOTdBOJpV85BXCAykSdHvtSVb3ZV6OyER9BE9Xr6COqppHg7ZtPgrJP7aScxQU6Pjp7BMexvFzLncM7nJr9z4qnwj8_-qzHIZ9Wh8zfZJ3vtlJcEthgTUU0KBQrSlDqbQTSV8ODrLR-77W3FNxHFFrYKhfF8U34yVDwzxh2hv18I0io3J3mlqfku11ib1chccMSi7bCctqzNyg2tNNACAyRmWoU98MZiNyDy8-aF2mbQ1naQT7SiNiSv1Ua6-XCM"/>
+<div class="absolute top-4 left-4 flex flex-col items-center justify-center w-14 h-16 bg-gold-300 rounded-lg shadow-md text-on-primary-fixed">
+<span class="font-text-h4 font-bold leading-none">05</span>
+<span class="font-text-tiny uppercase font-bold">Oct</span>
+</div>
+<div class="absolute top-4 right-4 bg-tertiary-container text-on-primary px-3 py-1 rounded-full text-text-tiny font-bold uppercase tracking-wider">
+                            Result
+                        </div>
+</div>
+<div class="p-space-6 flex flex-col flex-grow">
+<h3 class="font-text-h4 text-text-h4 text-on-background mb-space-3 group-hover:text-primary transition-colors">Mid-Term Results Published</h3>
+<p class="font-text-body text-text-small text-on-surface-variant mb-space-6 line-clamp-3">
+                            The results for the First Semester Mid-Term Examination are now available on the Student Portal. Parents can download the performance reports.
+                        </p>
+<div class="mt-auto flex items-center justify-between">
+<a class="text-primary font-semibold flex items-center gap-1 group/link" href="#">
+                                Read More 
+                                <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<span class="text-ink-500 font-text-tiny">Downloadable</span>
+</div>
+</div>
+</article>
+<!-- News Card -->
+<article class="group bg-white rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Wide shot of a modern school library with students engaged in collaborative learning around large wooden tables. The background features floor-to-ceiling bookshelves and soft, warm ambient lighting. The atmosphere is quiet and studious, utilizing a professional photography style that emphasizes space and intellectual growth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFrcy_0De4gq_ZIiHvReWox-Nuqc95DT6lysmpIdowNnh3fqB-0cIlaZzV7-fYLZoIKghtPmtECpaVJi_kNBcOqdtNlGB7JBfyruQDnkzUxfWPYA6fnMkE5wID6gEdWwRTwtwL-jrqV3ko3wfQhSalQwo4LK1cgKi0GoQythlo40sUhnFCjUlwrnCDFmMukYN_uSVozn86Ii6-efr_KPS2oiHn0rJ5fWZubVMV7bISiczxhz0rqGomG26DLHOlERvmtRSAUoPNFdA"/>
+<div class="absolute top-4 left-4 flex flex-col items-center justify-center w-14 h-16 bg-gold-300 rounded-lg shadow-md text-on-primary-fixed">
+<span class="font-text-h4 font-bold leading-none">30</span>
+<span class="font-text-tiny uppercase font-bold">Sep</span>
+</div>
+<div class="absolute top-4 right-4 bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-text-tiny font-bold uppercase tracking-wider">
+                            News
+                        </div>
+</div>
+<div class="p-space-6 flex flex-col flex-grow">
+<h3 class="font-text-h4 text-text-h4 text-on-background mb-space-3 group-hover:text-primary transition-colors">New Digital Library Wing</h3>
+<p class="font-text-body text-text-small text-on-surface-variant mb-space-6 line-clamp-3">
+                            We are excited to announce the inauguration of our state-of-the-art Digital Library wing, featuring 50 new workstations and a vast e-book collection.
+                        </p>
+<div class="mt-auto flex items-center justify-between">
+<a class="text-primary font-semibold flex items-center gap-1 group/link" href="#">
+                                Read More 
+                                <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<span class="text-ink-500 font-text-tiny">4 min read</span>
+</div>
+</div>
+</article>
+<!-- News Card Asymmetric Content -->
+<article class="group bg-white rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An energetic action shot of students playing football on a lush green sports field at dusk. The school buildings are visible in the distance under a warm orange sunset glow. High-quality sports photography with motion blur elements captures the spirit of teamwork and health-conscious campus life." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrGhlQWdfu3iLmQj2-6URkEG_aXKzZ-BAVDxt_dxJ-lPVI6EZvcKGj_Br7Brq4mMotxM78ObSayeZxhjJg4sYvZZ6kwJ8QUNK8NDaOJeeybldrax8dQ8jqeTEh_sUGwtmqTWVRDbfaUlnasUb_Z4jrO-Oo3wLvAs-toF7hBRgNz7OJXB--ryA-kPBJUcByBSkE_GCowbMl4srK9zGx_Tbu8ptJ9SRI7TZrMQpsL9KgXdb9I9bhPFMfvF2N7V0EjIZYIujb-K7IMOs"/>
+<div class="absolute top-4 left-4 flex flex-col items-center justify-center w-14 h-16 bg-gold-300 rounded-lg shadow-md text-on-primary-fixed">
+<span class="font-text-h4 font-bold leading-none">25</span>
+<span class="font-text-tiny uppercase font-bold">Sep</span>
+</div>
+<div class="absolute top-4 right-4 bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-text-tiny font-bold uppercase tracking-wider">
+                            News
+                        </div>
+</div>
+<div class="p-space-6 flex flex-col flex-grow">
+<h3 class="font-text-h4 text-text-h4 text-on-background mb-space-3 group-hover:text-primary transition-colors">Annual Sports Day Highlights</h3>
+<p class="font-text-body text-text-small text-on-surface-variant mb-space-6 line-clamp-3">
+                            Relive the excitement of our Annual Sports Meet. Check out the winners' gallery and the record-breaking performances of the year.
+                        </p>
+<div class="mt-auto flex items-center justify-between">
+<a class="text-primary font-semibold flex items-center gap-1 group/link" href="#">
+                                Read More 
+                                <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<span class="text-ink-500 font-text-tiny">Gallery</span>
+</div>
+</div>
+</article>
+<!-- Notice Card -->
+<article class="group bg-white rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A teacher addressing a diverse group of attentive students in a modern classroom. The atmosphere is warm and intellectual, with sunlight streaming through large windows. The interior features deep purple accents and high-end wooden furniture, creating a sophisticated and professional learning environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkN0C5M7fO1c4bwoVkKV6rrdq4yZFlDFMq7LZYAwrY4UU9CuCQ0xlhLHpCOat987_xGZJJZKBsHZv5EhoWL_EQ1z79zCADabdvKo5RJiVu-VJUDUTyJ3-fBvMVOQA_4Qix9vzPCrK6pJt3UWYl8QF83ziTXNHPhIezNLiq9bkS3Wl9-5E_n73nvJ-4Gc2jnOeTCgXpVeH5JgTSC8ceEWFbMIb-E8ohUkDR6egW5hmuytdh54FdCbIqHmny8BWiKl5bVPqlMUUX8_k"/>
+<div class="absolute top-4 left-4 flex flex-col items-center justify-center w-14 h-16 bg-gold-300 rounded-lg shadow-md text-on-primary-fixed">
+<span class="font-text-h4 font-bold leading-none">15</span>
+<span class="font-text-tiny uppercase font-bold">Sep</span>
+</div>
+<div class="absolute top-4 right-4 bg-primary text-on-primary px-3 py-1 rounded-full text-text-tiny font-bold uppercase tracking-wider">
+                            Notice
+                        </div>
+</div>
+<div class="p-space-6 flex flex-col flex-grow">
+<h3 class="font-text-h4 text-text-h4 text-on-background mb-space-3 group-hover:text-primary transition-colors">Parent-Teacher Meeting</h3>
+<p class="font-text-body text-text-small text-on-surface-variant mb-space-6 line-clamp-3">
+                            The First Term Parent-Teacher Interaction is scheduled for next Saturday. Time slots have been mailed to all registered email addresses.
+                        </p>
+<div class="mt-auto flex items-center justify-between">
+<a class="text-primary font-semibold flex items-center gap-1 group/link" href="#">
+                                Read More 
+                                <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<span class="text-ink-500 font-text-tiny">10:00 AM Start</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="mt-space-16 flex items-center justify-center gap-space-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-bold shadow-md">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container transition-colors">3</button>
+<span class="px-2">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container transition-colors">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-on-primary-fixed full-width relative mt-space-32 border-t border-primary-container">
+<div class="w-full pt-space-16 pb-space-8 px-space-6 max-w-container-default mx-auto grid grid-cols-1 md:grid-cols-4 gap-space-12">
+<!-- Brand Info -->
+<div class="col-span-1 md:col-span-1">
+<span class="font-text-h3 font-bold text-gold-300 mb-space-4 block">Gurukul Academy</span>
+<p class="text-pink-100 font-text-small text-text-small mb-space-6">Nurturing wisdom and values since 1995. Our commitment is to holistic growth through traditional roots and modern vision.</p>
+<div class="flex gap-4">
+<a class="text-pink-100 hover:text-white" href="#"><span class="material-symbols-outlined">Notebook</span></a>
+<a class="text-pink-100 hover:text-white" href="#"><span class="material-symbols-outlined">link</span></a>
+<a class="text-pink-100 hover:text-white" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<!-- Links Column 1 -->
+<div>
+<h4 class="font-text-h4 text-text-h4 text-on-primary mb-space-6">Quick Links</h4>
+<ul class="space-y-space-3">
+<li><a class="text-pink-100 hover:text-white transition-colors hover:underline decoration-gold-300 underline-offset-4 font-text-small text-text-small" href="#">Academic Calendar</a></li>
+<li><a class="text-pink-100 hover:text-white transition-colors hover:underline decoration-gold-300 underline-offset-4 font-text-small text-text-small" href="#">Student Portal</a></li>
+<li><a class="text-gold-300 font-bold hover:underline underline-offset-4 font-text-small text-text-small" href="#">News &amp; Notices</a></li>
+<li><a class="text-pink-100 hover:text-white transition-colors hover:underline decoration-gold-300 underline-offset-4 font-text-small text-text-small" href="#">School Virtual Tour</a></li>
+</ul>
+</div>
+<!-- Links Column 2 -->
+<div>
+<h4 class="font-text-h4 text-text-h4 text-on-primary mb-space-6">Admissions</h4>
+<ul class="space-y-space-3">
+<li><a class="text-pink-100 hover:text-white transition-colors hover:underline decoration-gold-300 underline-offset-4 font-text-small text-text-small" href="#">Admission Process</a></li>
+<li><a class="text-pink-100 hover:text-white transition-colors hover:underline decoration-gold-300 underline-offset-4 font-text-small text-text-small" href="#">Fee Structure</a></li>
+<li><a class="text-pink-100 hover:text-white transition-colors hover:underline decoration-gold-300 underline-offset-4 font-text-small text-text-small" href="#">Scholarships</a></li>
+<li><a class="text-pink-100 hover:text-white transition-colors hover:underline decoration-gold-300 underline-offset-4 font-text-small text-text-small" href="#">Careers</a></li>
+</ul>
+</div>
+<!-- Contact -->
+<div>
+<h4 class="font-text-h4 text-text-h4 text-on-primary mb-space-6">Contact Us</h4>
+<div class="space-y-space-4 text-pink-100 font-text-small text-text-small">
+<p class="flex items-start gap-3">
+<span class="material-symbols-outlined text-gold-300">location_on</span>
+                        123 Wisdom Grove, Sector 12, Academic Valley, 560001
+                    </p>
+<p class="flex items-center gap-3">
+<span class="material-symbols-outlined text-gold-300">call</span>
+                        +91 (080) 2456 7890
+                    </p>
+<p class="flex items-center gap-3">
+<span class="material-symbols-outlined text-gold-300">mail</span>
+                        admissions@gurukul.edu
+                    </p>
+</div>
+</div>
+</div>
+<div class="w-full max-w-container-default mx-auto px-space-6 mt-space-12 pt-space-8 border-t border-primary-container/30">
+<p class="text-pink-100 font-text-small text-text-small text-center opacity-70">
+                © 2024 Gurukul Academy. All Rights Reserved.
+            </p>
+</div>
+</footer>
+</body></html>
