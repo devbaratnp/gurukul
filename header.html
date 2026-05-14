@@ -1,0 +1,51 @@
+<!-- Reusable site header. Injected into <div id="site-header"></div> by header.js. -->
+<nav class="full-width top-0 sticky z-50 bg-surface dark:bg-background shadow-sm hover:shadow-md transition-shadow duration-300">
+  <div class="flex justify-between items-center w-full max-w-container-default mx-auto px-space-6 h-20">
+
+    <!-- Brand -->
+    <a href="index.html" class="font-text-h4 font-bold text-primary dark:text-primary-fixed-dim tracking-tight">
+      Gurukul Academy
+    </a>
+
+    <!-- Desktop nav -->
+    <div class="hidden md:flex gap-space-8 items-center">
+      <a data-nav-link href="index.html"      class="font-text-body text-text-body text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors">Home</a>
+      <a data-nav-link href="about.html"      class="font-text-body text-text-body text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors">About Us</a>
+      <a data-nav-link href="academics.html"  class="font-text-body text-text-body text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors">Academics</a>
+      <a data-nav-link href="admissions.html" class="font-text-body text-text-body text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors">Admissions</a>
+      <a data-nav-link href="faculty.html"    class="font-text-body text-text-body text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors">Life @ School</a>
+      <a data-nav-link href="news.html"       class="font-text-body text-text-body text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors">News</a>
+      <a data-nav-link href="contact.html"    class="font-text-body text-text-body text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors">Contact</a>
+    </div>
+
+    <!-- Right cluster: Apply Now (desktop) + hamburger (mobile) -->
+    <div class="flex items-center gap-space-3">
+      <button class="hidden md:inline-flex font-text-small font-semibold bg-secondary text-on-secondary px-space-6 py-space-3 rounded-full hover:shadow-lg transition-all active:scale-95 duration-150 ease-in-out">
+        Apply Now
+      </button>
+      <button id="navToggle" type="button"
+              aria-label="Open navigation"
+              aria-expanded="false"
+              aria-controls="mobileNav"
+              class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-md text-primary dark:text-primary-fixed-dim hover:bg-primary-100 dark:hover:bg-primary-container/30 transition-colors">
+        <span data-nav-icon class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div id="mobileNav" class="md:hidden hidden border-t border-outline-variant bg-surface dark:bg-background">
+    <div class="px-space-6 py-space-4 flex flex-col">
+      <a data-nav-link href="index.html"      class="font-text-body py-space-3 border-b border-outline-variant text-on-surface dark:text-surface-variant hover:text-secondary transition-colors">Home</a>
+      <a data-nav-link href="about.html"      class="font-text-body py-space-3 border-b border-outline-variant text-on-surface dark:text-surface-variant hover:text-secondary transition-colors">About Us</a>
+      <a data-nav-link href="academics.html"  class="font-text-body py-space-3 border-b border-outline-variant text-on-surface dark:text-surface-variant hover:text-secondary transition-colors">Academics</a>
+      <a data-nav-link href="admissions.html" class="font-text-body py-space-3 border-b border-outline-variant text-on-surface dark:text-surface-variant hover:text-secondary transition-colors">Admissions</a>
+      <a data-nav-link href="faculty.html"    class="font-text-body py-space-3 border-b border-outline-variant text-on-surface dark:text-surface-variant hover:text-secondary transition-colors">Life @ School</a>
+      <a data-nav-link href="news.html"       class="font-text-body py-space-3 border-b border-outline-variant text-on-surface dark:text-surface-variant hover:text-secondary transition-colors">News</a>
+      <a data-nav-link href="contact.html"    class="font-text-body py-space-3 text-on-surface dark:text-surface-variant hover:text-secondary transition-colors">Contact</a>
+      <button class="mt-space-4 font-text-small font-semibold bg-secondary text-on-secondary px-space-6 py-space-3 rounded-full hover:shadow-lg transition-all">
+        Apply Now
+      </button>
+    </div>
+  </div>
+</nav>

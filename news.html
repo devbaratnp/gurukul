@@ -136,23 +136,9 @@
     </script>
 </head>
 <body class="bg-surface text-on-surface min-h-screen selection:bg-primary-100 selection:text-primary overflow-x-hidden">
-<!-- Top Navigation Bar -->
-<header class="docked full-width top-0 sticky z-50 bg-surface dark:bg-background shadow-sm hover:shadow-md transition-shadow duration-300">
-<nav class="flex justify-between items-center w-full max-w-container-default mx-auto px-space-6 h-20">
-<div class="flex items-center gap-2">
-<span class="font-text-h4 font-bold text-primary dark:text-primary-fixed-dim tracking-tight">Gurukul Academy</span>
-</div>
-<div class="hidden md:flex items-center gap-space-8">
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-text-body text-text-body" href="index.html">Home</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-text-body text-text-body" href="about.html">About Us</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-text-body text-text-body" href="academics.html">Academics</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-text-body text-text-body" href="admissions.html">Admissions</a>
-<a class="text-primary dark:text-primary-fixed-dim font-semibold border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-text-body text-text-body" href="faculty.html">Life @ School</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-text-body text-text-body" href="contact.html">Contact</a>
-</div>
-<button class="bg-primary text-on-primary px-space-6 py-space-2 rounded-lg font-text-small font-semibold hover:translate-y-[-1px] transition-all active:scale-95">Apply Now</button>
-</nav>
-</header>
+<!-- Top Navigation Bar (loaded from header.html) -->
+<div id="site-header"></div>
+<script src="header.js" defer></script>
 <main class="relative">
 <!-- Background Decorations -->
 <div class="absolute top-20 right-[-10%] w-[500px] h-[500px] bg-primary-100 rounded-full soft-blob opacity-50"></div>

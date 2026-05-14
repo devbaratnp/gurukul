@@ -143,29 +143,9 @@
 </head>
 <body class="bg-surface font-text-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed-variant">
 <!-- TopNavBar -->
-<header class="docked full-width top-0 sticky z-50 bg-surface shadow-sm hover:shadow-md transition-shadow duration-300">
-<div class="flex justify-between items-center w-full max-w-container-default mx-auto px-space-6 h-20">
-<div class="flex items-center">
-<span class="font-text-h4 font-bold text-primary tracking-tight">Gurukul Academy</span>
-</div>
-<nav class="hidden md:flex gap-space-8 items-center">
-<a class="text-on-surface-variant hover:text-primary transition-colors font-text-body text-text-body" href="index.html">Home</a>
-
-<a class="text-on-surface-variant hover:text-primary transition-colors font-text-body text-text-body" href="about.html">About Us</a>
-
-<a class="text-primary font-semibold border-b-2 border-primary pb-1 font-text-body text-text-body" href="academics.html">Academics</a>
-
-<a class="text-on-surface-variant hover:text-primary transition-colors font-text-body text-text-body" href="admissions.html">Admissions</a>
-
-<a class="text-on-surface-variant hover:text-primary transition-colors font-text-body text-text-body" href="faculty.html">Life @ School</a>
-
-<a class="text-on-surface-variant hover:text-primary transition-colors font-text-body text-text-body" href="contact.html">Contact</a>
-</nav>
-<button class="bg-primary text-on-primary px-space-6 py-space-3 rounded-full font-text-small font-semibold hover:translate-y-[-1px] transition-all shadow-sm hover:shadow-md active:scale-95">
-                Apply Now
-            </button>
-</div>
-</header>
+<!-- Top Navigation Bar (loaded from header.html) -->
+<div id="site-header"></div>
+<script src="header.js" defer></script>
 <main class="relative overflow-hidden">
 <!-- Background Blobs -->
 <div class="soft-blob bg-primary w-[500px] h-[500px] -top-24 -left-24 rounded-full"></div>

@@ -136,21 +136,9 @@
     </style>
 </head>
 <body class="bg-surface text-on-surface font-text-body">
-<!-- Top Navigation Bar -->
-<header class="bg-surface sticky top-0 z-50 shadow-sm transition-shadow duration-300">
-<nav class="flex justify-between items-center w-full max-w-container-default mx-auto px-space-6 h-20">
-<div class="font-text-h4 font-bold text-primary tracking-tight">Gurukul Academy</div>
-<div class="hidden md:flex gap-space-8 items-center">
-<a class="text-on-surface-variant hover:text-primary transition-colors font-text-body" href="index.html">Home</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-text-body" href="about.html">About Us</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-text-body" href="academics.html">Academics</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-text-body" href="admissions.html">Admissions</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-text-body" href="faculty.html">Life @ School</a>
-<a class="text-primary font-semibold border-b-2 border-primary pb-1 font-text-body" href="contact.html">Contact</a>
-</div>
-<button class="bg-secondary text-on-secondary px-space-6 py-space-2 rounded-full font-text-small font-semibold hover:translate-y-[-1px] hover:shadow-md transition-all">Apply Now</button>
-</nav>
-</header>
+<!-- Top Navigation Bar (loaded from header.html) -->
+<div id="site-header"></div>
+<script src="header.js" defer></script>
 <main class="relative overflow-hidden">
 <!-- Background Accents -->
 <div class="absolute -top-24 -left-24 w-96 h-96 bg-primary-300 rounded-full blob-bg z-0"></div>
